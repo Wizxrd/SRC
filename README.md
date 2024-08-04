@@ -99,6 +99,7 @@ LCtrl + A            | [Toggle Friendly RWR Labels](#air-defense--ship-defense-r
 LCtrl + Z            | [Toggle Enemy RWR Labels](#air-defense--ship-defense-rings)
 LCtrl + X            | [BRAA Line From Bulls](#braa-from-bullseye)
 LCtrl + C            | [Place Center](#place-cntr)
+Escape               | Clear [command](#command-area) text
 
 
 ### **Commands**
