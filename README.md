@@ -20,7 +20,7 @@
 #### **Connect Window**
 ![ConnectWindow](Images/ConnectWindow.png)
 ![SavedServer](Images/SavedServer.png)
-- To open the connect window, click the **CONNECT** button in the top left of the radar scope, indicated with green text. Or use the **LShft + F12** keybind.
+- To open the connect window, click the **CONNECT** button in the top left of the radar scope within the [**UCB**](#upper-control-buttons), indicated with green text. Or use the **LCtrl + F12** keybind.
 - For ease of use between different servers, it is highly recommended to save your server connection settings. To do so, all fields must be filled out and not left blank. Once filled out, you can then press **SAVE**.
 - The newly created saved server will then appear as the last in the list within the drop down menu below the **SAVED SERVERS** combo box. 
 - To **REMOVE** a server profile, select the one you wish to remove from the **SAVED SERVERS** combo box, then click **REMOVE**.
@@ -28,7 +28,7 @@
 - To connect, click the **CONNECT** button once you have filled out the **SERVERIP:PORT**, **PASSWORD**, and **CALLSIGN** text boxes.
 
 #### **Messages Window**
-- To open the messages window, use the keybind **LShft + M**.
+- To open the messages window, use the keybind **LCtrl + M**.
 - The **MESSAGES** window provides a quick and easy way to chat with other controllers and players in game.
 - To open a specific chat, use the left mouse button on the button located at the top of the messages window.
 - Private message buttons can be removed with the right mouse button.
@@ -59,12 +59,13 @@ Message Type | Description
 
 #### **Controllers List Window**
 ![ControllerListWindow](Images/ControllerListWindow.png)
-- To open the controllers list use the keybind **LShft + L**
+- To open the controllers list use the keybind **LCtrl + L**
 - Shows currently connected controllers indicated by the position they've connected as, **BLUE**, **RED**, or **ADMIN** followed by their callsign used to connect.
 
 #### **Settings Window**
 ![SettingsWIndow](Images/Settings.png)
 - For now, this is minimal but in the future this will become more detailed.
+- Can be opened clicking the **SETTINGS** [**UCB**](#upper-control-buttons) or by using the keybind **LCtrl + S**
 ##### **Full METAR**
 ![FullMETAR](Images/FullMETAR.png)
 
@@ -76,7 +77,7 @@ Message Type | Description
 #### **Help Window**
 ![HelpWindow](Images/HelpWindow.png)
 - The help window is a quick reference to keybinds, commands and a brief description.
-- Can be opened by clicking the **HELP** button located above the [**MCB**](#main-control-buttons-mcb), or by using the keybind **LShft + H**.
+- Can be opened by clicking the **HELP** [**UCB**](#upper-control-buttons) located above the [**MCB**](#main-control-buttons-mcb), or by using the keybind **LCtrl + H**.
 
 ### **Keybinds**
 Keybind | Description
