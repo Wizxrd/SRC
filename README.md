@@ -1,2 +1,2 @@
-# SRC
-Standalone Radar Control for DCS World
+# ***SRC - Standalone Radar Control***
+A simple radar client and server for DCS World.
