@@ -1,8 +1,4 @@
-8/3/2024 22:55:51 | INFO | TryConnect | attempting to establish connection
-8/3/2024 22:55:51 | INFO | ListenToServer | connection successfully established
-8/3/2024 22:56:12 | INFO | ListenToServer | connection closed
-8/3/2024 22:56:12 | INFO | OnDisconnect | connection closed
-8/3/2024 22:56:19 | INFO | TryConnect | attempting to establish connection
-8/3/2024 22:56:19 | INFO | ListenToServer | connection successfully established
-8/3/2024 22:56:48 | INFO | ListenToServer | connection closed
-8/3/2024 22:56:48 | INFO | OnDisconnect | connection closed
+8/4/2024 0:19:32 | INFO | TryConnect | attempting to establish connection
+8/4/2024 0:19:32 | INFO | ListenToServer | connection successfully established
+8/4/2024 0:19:37 | INFO | ListenToServer | connection closed
+8/4/2024 0:19:37 | INFO | OnDisconnect | connection closed
