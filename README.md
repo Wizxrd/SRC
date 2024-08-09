@@ -126,8 +126,8 @@ Command | Description
 **LM CA**                | Load Caucasus MAP
 **LM SY**                | Load Syria MAP
 **LM PG**                | Load Persian Gulf MAP
-**CR <**RANGE**>**           | [Set Cursor Ring Range](#cursor-ring)
-**CA <**RANGE**>**           | [Set Conflict Alert Range](#conflict-alerts)
+**CR <**RADIUS**>**           | [Set Cursor Ring Range](#cursor-ring)
+**CA <**RADIUS**>**           | [Set Conflict Alert Range](#conflict-alerts)
 **CA**                  | [Disable conflict alert on a contact](#conflict-alert)
 **1-9**                 | Without pressing enter and clicking a contact sets a custom [Leader Direction](#leader-direction)
 **0**                   | Resets [Leader Direction](#leader-direction) back to global.
