@@ -100,7 +100,7 @@ LCtrl + A            | [Toggle Friendly RWR Labels](#air-defense--ship-defense-r
 LCtrl + Z            | [Toggle Enemy RWR Labels](#air-defense--ship-defense-rings)
 LCtrl + X            | [BRAA Line From Bulls](#braa-from-bullseye)
 LCtrl + C            | [Place Center](#place-cntr)
-Escape               | Clear [command](#command-area) text
+Escape               | Clear [command](#command-area) text / clear find square
 
 
 ### **Commands**
@@ -130,7 +130,12 @@ Command | Description
 **CA <**RANGE**>**           | [Set Conflict Alert Range](#conflict-alerts)
 **CA**                  | [Disable conflict alert on a contact](#conflict-alert)
 **1-9**                 | Without pressing enter and clicking a contact sets a custom [Leader Direction](#leader-direction)
+**0**                   | Resets [Leader Direction](#leader-direction) back to global.
 **LL <**Length**>**     | Without pressing enter and clicking a contact sets a custom [Leader Length](#leader-length)
+**LL**                    | Resets [Leader Length](#leader-length) back to global.
+**MF <**RADIUS**> <**ALT**> <**ALT**>** | [Merge Flight](#merge-flights) to remove datablocks and history surrounding the flight lead.
+**FIND <**ICAO/BEACON**>                | [Find](#find) a airport or beacon indicated with green flashing block.
+
 
 ### **Upper Control Buttons**
 ![UCB](Images/UCB.png)
@@ -227,6 +232,7 @@ scroll while the cursor is within the button to increase/decrease the range betw
 [**MT**](#metar) | Change the character size of METAR's
 [**GM**](#maps) | Change the character size of the GEOMAP.
 [**RWR**](#air-defense--ship-defense-rings) | Change the character size of the RWR air defense & ship labels.
+[**BCN**](#beacons) | Change the character size of the beacon display information
 
 #### **FILTER**
 ![Filter](Images/Filter.png)
@@ -253,6 +259,7 @@ scroll while the cursor is within the button to increase/decrease the range betw
 [**ENMY THR**](#air-defense--ship-defense-rings) | Toggle the display of enemy threat rings
 [**FRND RWR**](#air-defense--ship-defense-rings) | Toggle the display of friendly RWR air defense & ship labels
 [**ENMY RWR**](#air-defense--ship-defense-rings) | Toggle the dispaly of enemy RWR air defense & ship labels
+[**BCN**](#beacons)                              | Toggle the display of Beacons.
 
 #### **SHIFT**
 ![Shift](Images/Shift.png)
@@ -430,6 +437,12 @@ Type | Description
 #### **Filter Altitudes**
 - In the example below, the filter altitude is set from **002** to **040**.
 
+#### **Merge Flights**
+![MergeFlight](Images/MergeFlight.png)
+- Merging flights is useful for contacts flying in formation, it will remove the datablock and history of the wingman surrounding the winglead, filterable by a radius and min/max altitude in relation to the flight lead.
+1) To merge a flight, use the command **MF <**RADIUS**> <**MIN_ALT**> <**MAX_ALT**>** without pressing enter, click the flight lead.
+- Example: **MF 5 020 020**, this will filter out the datablocks and history of wingmen within 5NM within 2000FT below and within 2000FT above.
+
 ![FilterAltitudes](Images/FilterAltitudes.png)
 - In hundreds of feet, above sea level.
 - Filter altitudes can be set with the command **FA <**ALT**> <**ALT**>**, where the first alt is the minimum and second is the maximum.
@@ -494,6 +507,17 @@ Type | Description
 ![Sectors](Images/Sectors.png)
 - Based on real world ARTCC/FIR boundaries.
 - Displayed in a **yellow color**.
+
+### **Find**
+![FindICAO](Images/FindICAO.png)
+![Find](Images/Find.png)
+1) To find an airport use the command **FIND <**ICAO**>** and press enter. A green flashing square will appear at the place you're finding.
+2) To find a beacon, VOR, DME, VORTAC, VORDME, and TACAN use the command **FIND <**BCN**>**. A green flashing square will appear at the place you're finding.
+
+### **Beacons**
+![Beacons](Images/Beacons.png)
+
+- Beacons are displayed with a yellow dotted ring, you can use **Left Mouse Button** on the beacon to display more information about it.
 
 ### **Command Area**
 ![Commands](Images/Commands.png)
