@@ -134,7 +134,7 @@ Command | Description
 **LL <**Length**>**     | Without pressing enter and clicking a contact sets a custom [Leader Length](#leader-length)
 **LL**                    | Resets [Leader Length](#leader-length) back to global.
 **MF <**RADIUS**> <**ALT**> <**ALT**>** | [Merge Flight](#merge-flights) to remove datablocks and history surrounding the flight lead.
-**FIND <**ICAO/BEACON**>                | [Find](#find) a airport or beacon indicated with green flashing block.
+**FIND** <**ICAO/BEACON**>              | [Find](#find) a airport or beacon indicated with green flashing block.
 
 
 ### **Upper Control Buttons**
