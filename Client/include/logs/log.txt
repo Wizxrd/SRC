@@ -1,5 +1,8 @@
-8/9/2024 17:35:51 | INFO | TryConnect | attempting to establish connection
-8/9/2024 17:35:51 | INFO | ListenToServer | connection successfully established
-8/9/2024 17:35:51 | ERROR | OnConnectSuccess | Loading Syria
-8/9/2024 17:36:05 | INFO | ListenToServer | connection closed
-8/9/2024 17:36:05 | INFO | OnDisconnect | connection closed
+8/10/2024 6:24:15 | INFO | TryConnect | attempting to establish connection
+8/10/2024 6:24:15 | INFO | ListenToServer | connection successfully established
+8/10/2024 6:25:42 | INFO | ListenToServer | connection closed
+8/10/2024 6:25:42 | INFO | OnDisconnect | connection closed
+8/10/2024 6:25:49 | INFO | TryConnect | attempting to establish connection
+8/10/2024 6:25:49 | INFO | ListenToServer | connection successfully established
+8/10/2024 6:27:01 | INFO | OnDisconnect | connection closed
+8/10/2024 6:27:01 | INFO | ListenToServer | connection closed
