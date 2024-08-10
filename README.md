@@ -513,6 +513,7 @@ Type | Description
 ![Find](Images/Find.png)
 1) To find an airport use the command **FIND <**ICAO**>** and press enter. A green flashing square will appear at the place you're finding.
 2) To find a beacon, VOR, DME, VORTAC, VORDME, and TACAN use the command **FIND <**BCN**>**. A green flashing square will appear at the place you're finding.
+3) Once you've found the flashing square, use the **Escape** key on your keyboard, or **Left Mouse Button** anywhere on the scope.
 
 ### **Beacons**
 ![Beacons](Images/Beacons.png)
