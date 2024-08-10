@@ -64,15 +64,29 @@ Message Type | Description
 
 #### **Settings Window**
 ![SettingsWIndow](Images/Settings.png)
-- For now, this is minimal but in the future this will become more detailed.
 - Can be opened clicking the **SETTINGS** [**UCB**](#upper-control-buttons) or by using the keybind **LCtrl + S**
+
 ##### **Full METAR**
 ![FullMETAR](Images/FullMETAR.png)
-
-- When enabled you will get the full metar.
+- When checked you will get the full metar.
 
 ![PartialMETAR](Images/PartialMETAR.png)
-- When disabled, you will only get a partial metar that includes the ICAO, Wind/Speed, and Altimeter.
+- When unchecked, you will only get a partial metar that includes the ICAO, Wind/Speed, and Altimeter.
+
+##### **True Heading**
+![MagAndTrue](Images/MagTrueHeading.png)
+- When checked all labels that provide heading will also show a true heading.
+
+![MagOnly](Images/MagHeadingOnly.png)
+- When unchecked all labels that provide a heading will **not** provide a true heading.
+
+##### **Enemy Callsigns**
+![EnemyWithCallsign](Images/EnemyWithCallsign.png)
+- When checked enemy contacts will display the callsign.
+
+![EnemyNoCallsign](Images/EnemyNoCallsign.png)
+- When unchcked enemy contacts will **not** display the callsign.
+
 
 #### **Help Window**
 ![HelpWindow](Images/HelpWindow.png)
@@ -159,6 +173,7 @@ Command | Description
 [**PLACE RR**](#place-rr) | Allows a secondary range ring center position to be placed by left clicking anywhere within the scope.
 [**RR CNTR**](#rr-cntr) | Indicates when you are off of the default range ring center position.
 [**MAPS**](#maps) | Opens the maps submenu to show available maps to display. **MAPS** are based off of real world ARTCC/FIR boundaries.
+[**GEOMAPS**](#geomaps) | Opens the geographic maps submenu for airports and beacons.
 [**BRITE**](#brite) | Opens the brightness submenu.
 [**CHAR SIZE**](#char-size) | Opens the character size submenu.
 [**FILTER**](#filter) | Opens the filter submenu.
@@ -195,9 +210,23 @@ scroll while the cursor is within the button to increase/decrease the range betw
 
 #### **MAPS**
 ![Maps](Images/Maps.png)
-![GeoMap](Images/GeoMap.png)
 1) Within the **MAPS** submenu, you will be preseneted with options to select a map. To select a map, Use the left mouse button on the map you wish to display. Currently these are **Caucasus**, **Syria**, and **Persian Gulf**. More maps will come in time, while also letting them be customized by the controller or server owners.
 2) Additionally you will see a **GEOMAPS** button, left clicking this button will display within the radar scope a quick look list of airports indicated by **ICAO**, **AIRBASE**, and **RUNWAYS**. this is useful for the **AB**, **RW**, **TW**, and **LC** commands.
+
+#### **GEOMAPS**
+![GeoMaps](Images/GeoMaps.png)
+**Button**|**Description**
+----------|---------------
+[**AIRBASES**](#airbases-geomaps) | Displays a list of Airbases by ICAO, Name, and Runways.
+[**BEACONS**](#beacons-geomaps) | DIsplays a list of Beacons by Callsign, Name, Channel, Frequency, and Type.
+
+##### **AIRBASES GEOMAPS**
+![AirbaseGeoMaps](Images/GeoMapsAirbases.png)
+- Quick reference for the [**FIND**](#find), [**AB**](#airbases), [**RW**](#airbases), [**TW**](#airbases), and [**LC**](#airbases) commands.
+
+##### **BEACONS GEOMAPS**
+![BeaconGeoMaps](Images/GeoMapsBeacons.png)
+- Quick reference for the [**FIND**](#find) command.
 
 #### **BRITE**
 ![Brite](Images/Brite.png)
@@ -450,9 +479,9 @@ Type | Description
 
 ### **Airbases**
 ![Airbase](Images/Airbase.png)
-- Airbases can be displayed with the command **AB <**ICAO**>**, it will show all runways and taxiways.
-- To toggle the display of all runways for an airbase you can use the command **RW <*ICAO**>**.
-- To toggle the displau of taxiways for an airbase you can use the command **TW <**ICAO>**.
+- Airbases can be displayed with the command **AB** <**ICAO**>, it will show all runways and taxiways.
+- To toggle the display of all runways for an airbase you can use the command **RW** <**ICAO**>.
+- To toggle the displau of taxiways for an airbase you can use the command **TW** <**ICAO>**.
 - The length and width of the runways & taxiways can be changed in the [**SHIFT**](#shift) submenu.
 
 #### **Localizers**
@@ -511,8 +540,8 @@ Type | Description
 ### **Find**
 ![FindICAO](Images/FindICAO.png)
 ![Find](Images/Find.png)
-1) To find an airport use the command **FIND <**ICAO**>** and press enter. A green flashing square will appear at the place you're finding.
-2) To find a beacon, VOR, DME, VORTAC, VORDME, and TACAN use the command **FIND <**BCN**>**. A green flashing square will appear at the place you're finding.
+1) To find an [airport](#airbases-geomaps) use the command **FIND <**ICAO**>** and press enter. A green flashing square will appear at the place you're finding.
+2) To find a [beacon](#beacons-geomaps), VOR, DME, VORTAC, VORDME, and TACAN use the command **FIND <**CALLSIGN**>**. A green flashing square will appear at the place you're finding.
 3) Once you've found the flashing square, use the **Escape** key on your keyboard, or **Left Mouse Button** anywhere on the scope.
 
 ### **Beacons**
