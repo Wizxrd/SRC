@@ -117,10 +117,10 @@ LCtrl + C            | [Place Center](#place-cntr)
 Escape               | Clear [command](#command-area) text / clear find square
 
 
-### **Commands**
+### **Enter Commands**
 - Type any of the following [commands](#command) followed by pressing **ENTER** on your keyboard.
 
-Command | Description
+Commands | Description
 --------|------------
 **RW <**ICAO**>**          | [Toggle Runways](#airbases)
 **RW TA**                | Toggle All Runways for the map
@@ -141,14 +141,26 @@ Command | Description
 **LM SY**                | Load Syria MAP
 **LM PG**                | Load Persian Gulf MAP
 **CR <**RADIUS**>**           | [Set Cursor Ring Range](#cursor-ring)
+**FIND** <**ICAO/BEACON**>              | [Find](#find) a airport or beacon indicated with green flashing block.
+**BE**                      | [Place New Bullseye](#placed-bullseyes)
+**BE RS**                   | [Reset Bullseye Reference To Default](#placed-bullseyes)
+
+
+### **Click Commands**
+- Type any of the following [commands](#command) followed by using the **Left Mouse Button** on the item.
+
+Commands | Description
+--------|------------
 **CA <**RADIUS**>**           | [Set Conflict Alert Range](#conflict-alerts)
 **CA**                  | [Disable conflict alert on a contact](#conflict-alert)
-**1-9**                 | Without pressing enter and clicking a contact sets a custom [Leader Direction](#leader-direction)
+**1-9**                 | Sets a custom [Leader Direction](#leader-direction)
 **0**                   | Resets [Leader Direction](#leader-direction) back to global.
-**LL <**Length**>**     | Without pressing enter and clicking a contact sets a custom [Leader Length](#leader-length)
+**LL <**Length**>**     | Sets a custom [Leader Length](#leader-length)
 **LL**                    | Resets [Leader Length](#leader-length) back to global.
 **MF <**RADIUS**> <**ALT**> <**ALT**>** | [Merge Flight](#merge-flights) to remove datablocks and history surrounding the flight lead.
-**FIND** <**ICAO/BEACON**>              | [Find](#find) a airport or beacon indicated with green flashing block.
+**MF**                                   | Removes the [Merge Flight](#merge-flights)
+**CS** <**Callsign**>           | Change A Contacts Callsign
+**CS**                   | Reset Callsign
 
 
 ### **Upper Control Buttons**
@@ -357,6 +369,28 @@ scroll while the cursor is within the button to increase/decrease the range betw
 1) To toggle the connecting line between contacts on or off, use left mouse button on the intended item in the list.
 2) To remove a link entirely from the list and the connecting line, use right mouse button on the intended item in the list.
 
+### **Bullseyes**
+![BlueBullseye](Images/BlueBullseye.png)
+- Blue bullseyes that are placed by the mission creators will be indicated in a dark blue color, with a center dot and 2 surrounding rings.
+
+![RedBullseye](Images/RedBullseye.png)
+- Red bullseyes that are placed by the mission creators will be indicated in a dark red color, with a center dot and 2 surrounding rings.
+
+#### **Placed Bullseyes**
+1) To place a bullseye, use the command **BE** and press enter, a bullseye will appear at the center of your scope.
+- To move a placed bullseye, use **Left Mouse Button**, click the bullseye and continue to hold and move your mouse cursor.
+- To set a placed bullseye as a new reference, use **Right Mouse Button** and click the bullseye.
+- To reset the bullseye reference back to the mission default, use the command **BE RS**
+- To delete a placed bullseye use **Double Left Mouse Button** and click the bullseye.
+- **NOTE:** If you've placed a bullseye and set it as a reference, when you delete it, the reference will go back to the last placed one. If there are no more placed bullseyes left after the last one you delete, it will go back to the default mission bullseye.
+
+![BluePlacedBullseye](Images/BluePlacedBullseye.png)
+- Blue placed bullseyes will be indicated in a light blue color with 2 rings.
+
+![RedPlacedBullseye](Images/RedPlacedBullseye.png)
+- Red placed bullseys will be indicated in a light red color with 2 rings.
+
+
 ### **Bulls Cursor**
 ![BullsCursor](Images/BullsCursor.png)
 - Provides **BEARING & RANGE** to the bullseye.
@@ -426,6 +460,7 @@ Number | Location
 **7** | **NW**
 **8** | **N**
 **9** | **NE**
+**0** | **Reset**
 
 #### **Leader Length**
 - Leader lines extend from the contact, to the data block in positions other than number 5, center.
@@ -442,6 +477,8 @@ Type | Description
 **K** | Tanker
 **R** | Recon
 **W** | AWACS
+**S** | Search and Rescue Helicopter
+**U** | Transport Helicopter
 
 #### **Velocity Vectors**
 - Velocity Vectors are projected along the contacts true heading track and extend and retract based upon the contacts ground speed.
