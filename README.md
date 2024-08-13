@@ -42,7 +42,7 @@ Standalone Radar Control or **SRC** for short, is a completely free solution and
 #### **Connect Window**
 ![ConnectWindow](Images/ConnectWindow.png)
 ![SavedServer](Images/SavedServer.png)
-- To open the connect window, click the **CONNECT** button in the top left of the radar scope, indicated with green text. Or use the **LShft + F12** keybind.
+- To open the connect window, click the **CONNECT** button in the top left of the radar scope within the [**UCB**](#upper-control-buttons), indicated with green text. Or use the **LCtrl + F12** keybind.
 - For ease of use between different servers, it is highly recommended to save your server connection settings. To do so, all fields must be filled out and not left blank. Once filled out, you can then press **SAVE**.
 - The newly created saved server will then appear as the last in the list within the drop down menu below the **SAVED SERVERS** combo box. 
 - To **REMOVE** a server profile, select the one you wish to remove from the **SAVED SERVERS** combo box, then click **REMOVE**.
@@ -50,7 +50,7 @@ Standalone Radar Control or **SRC** for short, is a completely free solution and
 - To connect, click the **CONNECT** button once you have filled out the **SERVERIP:PORT**, **PASSWORD**, and **CALLSIGN** text boxes.
 
 #### **Messages Window**
-- To open the messages window, use the keybind **LShft + M**.
+- To open the messages window, use the keybind **LCtrl + M**.
 - The **MESSAGES** window provides a quick and easy way to chat with other controllers and players in game.
 - To open a specific chat, use the left mouse button on the button located at the top of the messages window.
 - Private message buttons can be removed with the right mouse button.
@@ -81,24 +81,39 @@ Message Type | Description
 
 #### **Controllers List Window**
 ![ControllerListWindow](Images/ControllerListWindow.png)
-- To open the controllers list use the keybind **LShft + L**
+- To open the controllers list use the keybind **LCtrl + L**
 - Shows currently connected controllers indicated by the position they've connected as, **BLUE**, **RED**, or **ADMIN** followed by their callsign used to connect.
 
 #### **Settings Window**
 ![SettingsWIndow](Images/Settings.png)
-- For now, this is minimal but in the future this will become more detailed.
+- Can be opened clicking the **SETTINGS** [**UCB**](#upper-control-buttons) or by using the keybind **LCtrl + S**
+
 ##### **Full METAR**
 ![FullMETAR](Images/FullMETAR.png)
-
-- When enabled you will get the full metar.
+- When checked you will get the full metar.
 
 ![PartialMETAR](Images/PartialMETAR.png)
-- When disabled, you will only get a partial metar that includes the ICAO, Wind/Speed, and Altimeter.
+- When unchecked, you will only get a partial metar that includes the ICAO, Wind/Speed, and Altimeter.
+
+##### **True Heading**
+![MagAndTrue](Images/MagTrueHeading.png)
+- When checked all labels that provide heading will also show a true heading.
+
+![MagOnly](Images/MagHeadingOnly.png)
+- When unchecked all labels that provide a heading will **not** provide a true heading.
+
+##### **Enemy Callsigns**
+![EnemyWithCallsign](Images/EnemyWithCallsign.png)
+- When checked enemy contacts will display the callsign.
+
+![EnemyNoCallsign](Images/EnemyNoCallsign.png)
+- When unchcked enemy contacts will **not** display the callsign.
+
 
 #### **Help Window**
 ![HelpWindow](Images/HelpWindow.png)
 - The help window is a quick reference to keybinds, commands and a brief description.
-- Can be opened by clicking the **HELP** button located above the [**MCB**](#main-control-buttons-mcb), or by using the keybind **LShft + H**.
+- Can be opened by clicking the **HELP** [**UCB**](#upper-control-buttons) located above the [**MCB**](#main-control-buttons-mcb), or by using the keybind **LCtrl + H**.
 
 ### **Keybinds**
 Keybind | Description
@@ -121,12 +136,13 @@ LCtrl + A            | [Toggle Friendly RWR Labels](#air-defense--ship-defense-r
 LCtrl + Z            | [Toggle Enemy RWR Labels](#air-defense--ship-defense-rings)
 LCtrl + X            | [BRAA Line From Bulls](#braa-from-bullseye)
 LCtrl + C            | [Place Center](#place-cntr)
+Escape               | Clear [command](#command-area) text / clear find square
 
 
-### **Commands**
+### **Enter Commands**
 - Type any of the following [commands](#command) followed by pressing **ENTER** on your keyboard.
 
-Command | Description
+Commands | Description
 --------|------------
 **RW <**ICAO**>**          | [Toggle Runways](#airbases)
 **RW TA**                | Toggle All Runways for the map
@@ -146,11 +162,28 @@ Command | Description
 **LM CA**                | Load Caucasus MAP
 **LM SY**                | Load Syria MAP
 **LM PG**                | Load Persian Gulf MAP
-**CR <**RANGE**>**           | [Set Cursor Ring Range](#cursor-ring)
-**CA <**RANGE**>**           | [Set Conflict Alert Range](#conflict-alerts)
+**CR <**RADIUS**>**           | [Set Cursor Ring Range](#cursor-ring)
+**FIND** <**ICAO/BEACON**>              | [Find](#find) a airport or beacon indicated with green flashing block.
+**BE**                      | [Place New Bullseye](#placed-bullseyes)
+**BE RS**                   | [Reset Bullseye Reference To Default](#placed-bullseyes)
+
+
+### **Click Commands**
+- Type any of the following [commands](#command) followed by using the **Left Mouse Button** on the item.
+
+Commands | Description
+--------|------------
+**CA <**RADIUS**>**           | [Set Conflict Alert Range](#conflict-alerts)
 **CA**                  | [Disable conflict alert on a contact](#conflict-alert)
-**1-9**                 | Without pressing enter and clicking a contact sets a custom [Leader Direction](#leader-direction)
-**LL <**Length**>**     | Without pressing enter and clicking a contact sets a custom [Leader Length](#leader-length)
+**1-9**                 | Sets a custom [Leader Direction](#leader-direction)
+**0**                   | Resets [Leader Direction](#leader-direction) back to global.
+**LL <**Length**>**     | Sets a custom [Leader Length](#leader-length)
+**LL**                    | Resets [Leader Length](#leader-length) back to global.
+**MF <**RADIUS**> <**ALT**> <**ALT**>** | [Merge Flight](#merge-flights) to remove datablocks and history surrounding the flight lead.
+**MF**                                   | Removes the [Merge Flight](#merge-flights)
+**CS** <**Callsign**>           | Change A Contacts Callsign
+**CS**                   | Reset Callsign
+
 
 ### **Upper Control Buttons**
 ![UCB](Images/UCB.png)
@@ -174,6 +207,7 @@ Command | Description
 [**PLACE RR**](#place-rr) | Allows a secondary range ring center position to be placed by left clicking anywhere within the scope.
 [**RR CNTR**](#rr-cntr) | Indicates when you are off of the default range ring center position.
 [**MAPS**](#maps) | Opens the maps submenu to show available maps to display. **MAPS** are based off of real world ARTCC/FIR boundaries.
+[**GEOMAPS**](#geomaps) | Opens the geographic maps submenu for airports and beacons.
 [**BRITE**](#brite) | Opens the brightness submenu.
 [**CHAR SIZE**](#char-size) | Opens the character size submenu.
 [**FILTER**](#filter) | Opens the filter submenu.
@@ -210,9 +244,23 @@ scroll while the cursor is within the button to increase/decrease the range betw
 
 #### **MAPS**
 ![Maps](Images/Maps.png)
-![GeoMap](Images/GeoMap.png)
 1) Within the **MAPS** submenu, you will be preseneted with options to select a map. To select a map, Use the left mouse button on the map you wish to display. Currently these are **Caucasus**, **Syria**, and **Persian Gulf**. More maps will come in time, while also letting them be customized by the controller or server owners.
 2) Additionally you will see a **GEOMAPS** button, left clicking this button will display within the radar scope a quick look list of airports indicated by **ICAO**, **AIRBASE**, and **RUNWAYS**. this is useful for the **AB**, **RW**, **TW**, and **LC** commands.
+
+#### **GEOMAPS**
+![GeoMaps](Images/GeoMaps.png)
+**Button**|**Description**
+----------|---------------
+[**AIRBASES**](#airbases-geomaps) | Displays a list of Airbases by ICAO, Name, and Runways.
+[**BEACONS**](#beacons-geomaps) | DIsplays a list of Beacons by Callsign, Name, Channel, Frequency, and Type.
+
+##### **AIRBASES GEOMAPS**
+![AirbaseGeoMaps](Images/GeoMapsAirbases.png)
+- Quick reference for the [**FIND**](#find), [**AB**](#airbases), [**RW**](#airbases), [**TW**](#airbases), and [**LC**](#airbases) commands.
+
+##### **BEACONS GEOMAPS**
+![BeaconGeoMaps](Images/GeoMapsBeacons.png)
+- Quick reference for the [**FIND**](#find) command.
 
 #### **BRITE**
 ![Brite](Images/Brite.png)
@@ -247,6 +295,7 @@ scroll while the cursor is within the button to increase/decrease the range betw
 [**MT**](#metar) | Change the character size of METAR's
 [**GM**](#maps) | Change the character size of the GEOMAP.
 [**RWR**](#air-defense--ship-defense-rings) | Change the character size of the RWR air defense & ship labels.
+[**BCN**](#beacons) | Change the character size of the beacon display information
 
 #### **FILTER**
 ![Filter](Images/Filter.png)
@@ -273,6 +322,7 @@ scroll while the cursor is within the button to increase/decrease the range betw
 [**ENMY THR**](#air-defense--ship-defense-rings) | Toggle the display of enemy threat rings
 [**FRND RWR**](#air-defense--ship-defense-rings) | Toggle the display of friendly RWR air defense & ship labels
 [**ENMY RWR**](#air-defense--ship-defense-rings) | Toggle the dispaly of enemy RWR air defense & ship labels
+[**BCN**](#beacons)                              | Toggle the display of Beacons.
 
 #### **SHIFT**
 ![Shift](Images/Shift.png)
@@ -340,6 +390,28 @@ scroll while the cursor is within the button to increase/decrease the range betw
 - List of all linked **BR**'s between contacts with the ability to toggle the connecting line between contacts.
 1) To toggle the connecting line between contacts on or off, use left mouse button on the intended item in the list.
 2) To remove a link entirely from the list and the connecting line, use right mouse button on the intended item in the list.
+
+### **Bullseyes**
+![BlueBullseye](Images/BlueBullseye.png)
+- Blue bullseyes that are placed by the mission creators will be indicated in a dark blue color, with a center dot and 2 surrounding rings.
+
+![RedBullseye](Images/RedBullseye.png)
+- Red bullseyes that are placed by the mission creators will be indicated in a dark red color, with a center dot and 2 surrounding rings.
+
+#### **Placed Bullseyes**
+1) To place a bullseye, use the command **BE** and press enter, a bullseye will appear at the center of your scope.
+- To move a placed bullseye, use **Left Mouse Button**, click the bullseye and continue to hold and move your mouse cursor.
+- To set a placed bullseye as a new reference, use **Right Mouse Button** and click the bullseye.
+- To reset the bullseye reference back to the mission default, use the command **BE RS**
+- To delete a placed bullseye use **Double Left Mouse Button** and click the bullseye.
+- **NOTE:** If you've placed a bullseye and set it as a reference, when you delete it, the reference will go back to the last placed one. If there are no more placed bullseyes left after the last one you delete, it will go back to the default mission bullseye.
+
+![BluePlacedBullseye](Images/BluePlacedBullseye.png)
+- Blue placed bullseyes will be indicated in a light blue color with 2 rings.
+
+![RedPlacedBullseye](Images/RedPlacedBullseye.png)
+- Red placed bullseys will be indicated in a light red color with 2 rings.
+
 
 ### **Bulls Cursor**
 ![BullsCursor](Images/BullsCursor.png)
@@ -410,6 +482,7 @@ Number | Location
 **7** | **NW**
 **8** | **N**
 **9** | **NE**
+**0** | **Reset**
 
 #### **Leader Length**
 - Leader lines extend from the contact, to the data block in positions other than number 5, center.
@@ -426,6 +499,8 @@ Type | Description
 **K** | Tanker
 **R** | Recon
 **W** | AWACS
+**S** | Search and Rescue Helicopter
+**U** | Transport Helicopter
 
 #### **Velocity Vectors**
 - Velocity Vectors are projected along the contacts true heading track and extend and retract based upon the contacts ground speed.
@@ -450,6 +525,12 @@ Type | Description
 #### **Filter Altitudes**
 - In the example below, the filter altitude is set from **002** to **040**.
 
+#### **Merge Flights**
+![MergeFlight](Images/MergeFlight.png)
+- Merging flights is useful for contacts flying in formation, it will remove the datablock and history of the wingman surrounding the winglead, filterable by a radius and min/max altitude in relation to the flight lead.
+1) To merge a flight, use the command **MF <**RADIUS**> <**MIN_ALT**> <**MAX_ALT**>** without pressing enter, click the flight lead.
+- Example: **MF 5 020 020**, this will filter out the datablocks and history of wingmen within 5NM within 2000FT below and within 2000FT above.
+
 ![FilterAltitudes](Images/FilterAltitudes.png)
 - In hundreds of feet, above sea level.
 - Filter altitudes can be set with the command **FA <**ALT**> <**ALT**>**, where the first alt is the minimum and second is the maximum.
@@ -457,9 +538,9 @@ Type | Description
 
 ### **Airbases**
 ![Airbase](Images/Airbase.png)
-- Airbases can be displayed with the command **AB <**ICAO**>**, it will show all runways and taxiways.
-- To toggle the display of all runways for an airbase you can use the command **RW <*ICAO**>**.
-- To toggle the displau of taxiways for an airbase you can use the command **TW <**ICAO>**.
+- Airbases can be displayed with the command **AB** <**ICAO**>, it will show all runways and taxiways.
+- To toggle the display of all runways for an airbase you can use the command **RW** <**ICAO**>.
+- To toggle the displau of taxiways for an airbase you can use the command **TW** <**ICAO>**.
 - The length and width of the runways & taxiways can be changed in the [**SHIFT**](#shift) submenu.
 
 #### **Localizers**
@@ -514,6 +595,18 @@ Type | Description
 ![Sectors](Images/Sectors.png)
 - Based on real world ARTCC/FIR boundaries.
 - Displayed in a **yellow color**.
+
+### **Find**
+![FindICAO](Images/FindICAO.png)
+![Find](Images/Find.png)
+1) To find an [airport](#airbases-geomaps) use the command **FIND <**ICAO**>** and press enter. A green flashing square will appear at the place you're finding.
+2) To find a [beacon](#beacons-geomaps), VOR, DME, VORTAC, VORDME, and TACAN use the command **FIND <**CALLSIGN**>**. A green flashing square will appear at the place you're finding.
+3) Once you've found the flashing square, use the **Escape** key on your keyboard, or **Left Mouse Button** anywhere on the scope.
+
+### **Beacons**
+![Beacons](Images/Beacons.png)
+
+- Beacons are displayed with a yellow dotted ring, you can use **Left Mouse Button** on the beacon to display more information about it.
 
 ### **Command Area**
 ![Commands](Images/Commands.png)
