@@ -1,6 +1,28 @@
+# **Standalone Radar Control for DCS World**
+## **Description**
+Standalone Radar Control or **SRC** for short, is a completely free solution and as the title suggests a standalone radar control software used for ATC/GCI/AIC outside the DCS World environment.
+
 # **Documentation**
 
 ## **Client**
+
+### **Getting Started**
+1) Download the latest [**SRC Release**](https://github.com/Wizxrd/SRC/releases) source.zip.
+2) Extract the files from the .zip, place the folder in a location of your choosing.
+3) Navigate to the **Client** Folder and run the **Client.exe**.
+
+### **FAQ**
+**Q**: What is this?  
+**A**: A standalone solution to control players via a radar scope outside of DCS World, most commonly known as **ATC**, **GCI**, and **AIC**.
+
+**Q**: Do I need to have DCS World installed/own any maps?  
+**A**: No!
+
+**Q**: Does this use Tacview/DCS-gRPC/Mist/Moose?  
+**A**: No, SRC Server version utilizes custom standalone export scripts written in lua.
+
+**Q**: Is this a module for DCS World?  
+**A**: No, it is entirely standalone and the only requirements for the client version are listed [**here**](#requirements).
 
 ### **Requirements**
 - Windows 10 or 11
