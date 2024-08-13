@@ -407,7 +407,7 @@
   {
     "callsign": "GZP",
     "channel": "89",
-    "name": "ALANYA/GAZIPASA",
+    "name": "GAZIPASA",
     "frequency": "114200000",
     "lat": "36.298267",
     "lon": "32.300245",
@@ -416,7 +416,7 @@
   {
     "callsign": "GZP",
     "channel": "",
-    "name": "GAZIPASA/ALANYA",
+    "name": "ALANYA",
     "frequency": "316000",
     "lat": "36.300041",
     "lon": "32.300032",
@@ -425,7 +425,7 @@
   {
     "callsign": "GKE",
     "channel": "",
-    "name": "FAMAGUSTA_GECITKALE",
+    "name": "FAMAGUSTA GECITKALE",
     "frequency": "114300000",
     "lat": "35.233502",
     "lon": "33.727477",
@@ -857,7 +857,7 @@
   {
     "callsign": "ABC",
     "channel": "106",
-    "name": "PrinceHussein",
+    "name": "Prince Hussein",
     "frequency": "0",
     "lat": "32.159572",
     "lon": "37.148259",
