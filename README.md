@@ -118,25 +118,28 @@ Message Type | Description
 ### **Keybinds**
 Keybind | Description
 --------|------------
-LShift + Mouse Wheel | [Range Zoom In/Out](#range)
-LCtrl + Mouse Wheel  | [Range Rings Inc/Dec](#range-rings)
-LCtrl + F6           | Toggle [**MCB**](#main-control-buttons-mcb)
-LCtrl + F7           | Full Screen Borderless
-LCtrl + F8           | Minimize/Maximize
-LCtrl + F12          | [Connect Window/Disconnect](#connect-window)
-LCtrl + S            | [Settings Window](#settings-window)
-LCtrl + H            | [Help Window](#connect-window)
-LCtrl + M            | [Messages Window](#messages)
-LCtrl + L            | [Controllers List](#controllers-list)
-LCtrl + Q            | [Toggle Bullseye On BRAA](#braa-with-bullseye)
-LCtrl + W            | [Toggle Bullseye On Cursor](#bulls-cursor)
-LCtrl + E            | [Toggle Cursor Ring](#cursor-ring)
-LCtrl + R            | [Place Rings](#place-rr)
-LCtrl + A            | [Toggle Friendly RWR Labels](#air-defense--ship-defense-rings)
-LCtrl + Z            | [Toggle Enemy RWR Labels](#air-defense--ship-defense-rings)
-LCtrl + X            | [BRAA Line From Bulls](#braa-from-bullseye)
-LCtrl + C            | [Place Center](#place-cntr)
-Escape               | Clear [command](#command-area) text / clear find square
+**LShift + Mouse Wheel** | [Range Zoom In/Out](#range)
+**LCtrl + Mouse Wheel**  | [Range Rings Inc/Dec](#range-rings)
+**LShift + F1-F5** | Saves a center position and zoom to the F1-F5 keys.
+**F1-F5**                | Toggles to a saved center position and zoom.
+**LCtrl + F6**           | Toggle [**MCB**](#main-control-buttons-mcb)
+**LCtrl + F7**           | Full Screen Borderless
+**LCtrl + F8**           | Minimize/Maximize
+**LCtrl + F12**          | [Connect Window/Disconnect](#connect-window)
+**LCtrl + S**            | [Settings Window](#settings-window)
+**LCtrl + H**            | [Help Window](#connect-window)
+**LCtrl + M**            | [Messages Window](#messages)
+**LCtrl + L**            | [Controllers List](#controllers-list)
+**LCtrl + Q**            | [Toggle Bullseye On BRAA](#braa-with-bullseye)
+**LCtrl + W**            | [Toggle Bullseye On Cursor](#bulls-cursor)
+**LCtrl + E**            | [Toggle Cursor Ring](#cursor-ring)
+**LCtrl + R**            | [Place Rings](#place-rr)
+**LCtrl + A**            | [Toggle Friendly RWR Labels](#air-defense--ship-defense-rings)
+**LCtrl + Z**            | [Toggle Enemy RWR Labels](#air-defense--ship-defense-rings)
+**LCtrl + X**            | [BRAA Line From Bulls](#braa-from-bullseye)
+**LCtrl + C**            | [Place Center](#place-cntr)
+**LAlt/RAlt + BRAA**     | Rubber band zoom screen to match the width of the **Range** of the BRAA line.
+**Escape**               | Clear [command](#command-area) text / clear find square
 
 
 ### **Enter Commands**
@@ -166,6 +169,9 @@ Commands | Description
 **FIND** <**ICAO/BEACON**>              | [Find](#find) a airport or beacon indicated with green flashing block.
 **BE**                      | [Place New Bullseye](#placed-bullseyes)
 **BE RS**                   | [Reset Bullseye Reference To Default](#placed-bullseyes)
+**GM**                       | Toggles both [GeoMaps](#geomaps) for Airbases and Beacons.
+**GM AB**   | Toggles the [GeoMaps](#airbases-geomaps) for Airbases.
+**GM BC**  | Toggles the [GeoMaps](#beacons-geomaps) for Beacons.
 
 
 ### **Click Commands**
@@ -268,7 +274,7 @@ scroll while the cursor is within the button to increase/decrease the range betw
 
 **Button**|**Description**
 ----------|---------------
-[**SC**](#sectors) | Changes the brightness of the ARTCC/FIR sectors
+[**FIR**](#sectors) | Changes the brightness of the ARTCC/FIR sectors.
 [**RR**](#range-rings) | Changes the brightness of the range rings.
 [**BR**](#braa) | Changes the brightness of the BRAA line & Bullseye on cursor.
 [**CMD**](#command) | Changes the brightness of the command text.
@@ -306,12 +312,14 @@ scroll while the cursor is within the button to increase/decrease the range betw
 ----------|---------------
 [**TIME**](#time) | Toggle the display of mission & game run time
 [**DATE**](#date) | Toggle the display of the mission date
-[**VEC**](#velocity-vectors) | Toggle contacts to display a velocity vector line
-[**RR**](#range-rings) | Toggle the display of the range rings.
-[**HIST**](#history) | Toggle contacts to display a history track
-[**ISO**](#isolines) | Toggle the display of isolines
 [**ALT**](#filter-altitudes) | When clicked, shows the filtered altitude block in hundreds of feet
 [**CRS**](#crosshair) | Toggle the display of the crosshair located in the center of the scope
+[**VEC**](#velocity-vectors) | Toggle contacts to display a velocity vector line
+[**HIST**](#history) | Toggle contacts to display a history track
+[**ISO**](#isolines) | Toggle the display of isolines
+[**RR**](#range-rings) | Toggle the display of the range rings.
+[**BCN**](#beacons)   | Toggle the display of Beacons.
+[**FIR**](#sectors) | Toggle the Display of the Flight Information Region Sectors
 [**BR BULL**](#braa-from-bullseye) | Toggle the display of bullseye reference after the BR text
 [**BULL CURS**](#bulls-cursor) | Toggle the display of the bullseye reference linked to the mouse cursor
 [**BULL**](#bullseye) | Toggle the display bullseye for the side you're connected to
@@ -322,7 +330,6 @@ scroll while the cursor is within the button to increase/decrease the range betw
 [**ENMY THR**](#air-defense--ship-defense-rings) | Toggle the display of enemy threat rings
 [**FRND RWR**](#air-defense--ship-defense-rings) | Toggle the display of friendly RWR air defense & ship labels
 [**ENMY RWR**](#air-defense--ship-defense-rings) | Toggle the dispaly of enemy RWR air defense & ship labels
-[**BCN**](#beacons)                              | Toggle the display of Beacons.
 
 #### **SHIFT**
 ![Shift](Images/Shift.png)
