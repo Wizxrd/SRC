@@ -565,6 +565,12 @@ Type | Description
 3) To toggle the conflict alert audio for a contact, use left mouse button on the contact.
 4) To remove a conflict alert for a contact, use the command **CA**. The command will await for you to click on the contact you intended to remove conflict alerts for.
 
+#### **Coasting Contacts**
+![CoastBright](Images/CoastBright.png)
+![CoastDark](Images/CoastedDark.png)
+- Contacts will enter a **Coasted** state if they stop receiving updates.
+- When in the coasted state, the contact & datablock will start to flash and **CST** will appear in green text to the left of the contact
+
 #### **Filter Altitudes**
 - In the example below, the filter altitude is set from **002** to **040**.
 
