@@ -88,6 +88,29 @@ Message Type | Description
 ![SettingsWIndow](Images/Settings.png)
 - Can be opened clicking the **SETTINGS** [**UCB**](#upper-control-buttons) or by using the keybind **LCtrl + S**
 
+**Setting** | **Description**
+------------|----------------
+[**Cursor**](#cursor) | Change the cursor used within the radar scope.
+[**Full METAR**](#full-metar) | Toggle the METAR to full or partial.
+[**True Heading**](#true-heading) | Toggle to show True Headings globally
+[**Enemy Callsigns**](#enemy-callsigns) | Toggle to show enemy callsigns.
+[**Shift Zoom**](#shift-zoom) | Toggle to use the SHIFT key in addition to mouse wheel for zooming.
+[**Metric Units**](#metric-units) | Toggle to show Metric Units globally.
+[**Discord Presence**](#discord-presence) | Toggle to show information about the server your connected to in your discord Presence. 
+
+
+##### **Cursor**
+**Cursor** | **Description**
+-----------|----------------
+[Scope](#scope-cursor) | Scope with open center and crosshair.
+[Cross](#crosshair-cursor) | Crosshair with no open center.
+
+###### **Scope Cursor**
+![Scope](Images/ScopeCursor.png)
+
+###### **Cross Cursor**
+![Cross](Images/CrosshairCursor.png)
+
 ##### **Full METAR**
 ![FullMETAR](Images/FullMETAR.png)
 - When checked you will get the full metar.
@@ -109,6 +132,17 @@ Message Type | Description
 ![EnemyNoCallsign](Images/EnemyNoCallsign.png)
 - When unchcked enemy contacts will **not** display the callsign.
 
+##### **Shift Zoom**
+- When enabled SHIFT is required in addition to mouse wheel to zoom.
+- When disabled SHIFT is not required with mouse wheel to zoom.
+
+##### **Metric Units**
+![MetricUnits](Images/MetricUnits.png)
+- When enabled all contacts and BR/BE information will be in Metric.
+- When disabled all contacts and BR/BE information will be in Imperial.
+
+##### **Discord Presence**
+![DiscordPresence](Images/DiscordPresence.png)
 
 #### **Help Window**
 ![HelpWindow](Images/HelpWindow.png)
@@ -189,6 +223,8 @@ Commands | Description
 **MF**                                   | Removes the [Merge Flight](#merge-flights)
 **CS** <**Callsign**>           | Change A Contacts Callsign
 **CS**                   | Reset Callsign
+**ME** | If [Settings Metric Units](#metric-units) are **disabled**, use this command to toggle between Metric and Imperial.
+**IM** | If [Settings Metric Units](#metric-units) are **enabled**, use this command to toggle between Imperial and Metric.
 
 
 ### **Upper Control Buttons**
@@ -528,6 +564,12 @@ Type | Description
 3) When a conflict arises, the ring will turn a **bright red color**, red text **CA** will appear in to the right of the contact and an audible tone will start playing.
 3) To toggle the conflict alert audio for a contact, use left mouse button on the contact.
 4) To remove a conflict alert for a contact, use the command **CA**. The command will await for you to click on the contact you intended to remove conflict alerts for.
+
+#### **Coasting Contacts**
+![CoastBright](Images/CoastBright.png)
+![CoastDark](Images/CoastedDark.png)
+- Contacts will enter a **Coasted** state if they stop receiving updates.
+- When in the coasted state, the contact & datablock will start to flash and **CST** will appear in green text to the left of the contact
 
 #### **Filter Altitudes**
 - In the example below, the filter altitude is set from **002** to **040**.
