@@ -103,7 +103,7 @@ Message Type | Description
 **Cursor** | **Description**
 -----------|----------------
 [Scope](#scope-cursor) | Scope with open center and crosshair.
-[Cross](#crosshair-cursor) | Crosshair with no open center.
+[Cross](#cross-cursor) | Crosshair with no open center.
 
 ###### **Scope Cursor**
 ![Scope](Images/ScopeCursor.png)
