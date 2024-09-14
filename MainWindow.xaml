@@ -1,0 +1,225 @@
+﻿<Window x:Class="SRCClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="1280" Height="720" FontFamily="Consolas" FontSize="12" FontWeight="Bold"
+        Icon="pack://application:,,,/Images/SRC.ico">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ControlTemplate x:Key="TitleBarTemplate" TargetType="Button">
+            <Grid>
+                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" BorderThickness="0"/>
+                <Image Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Tag}" Stretch="Uniform"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="MenuButtonTemplate" TargetType="Button">
+            <Grid>
+                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" BorderThickness="0"/>
+                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Name="MainWindowGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Name="TitleBorder" Grid.Row="0" Height="32" VerticalAlignment="Top" Background="#252525" MouseDown="BorderMouseLeftButtonDown" Cursor="Arrow">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="MenuButton" Grid.Column="0" Width="32" Height="32" Background="#252525" Click="MenuButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Menu.png"/>
+                <TextBlock Name="Title" Grid.Column="1" Text="SRC" VerticalAlignment="Center" Foreground="White" Margin="5" FontFamily="Consolas" FontWeight="Bold" FontSize="12"/>
+                <Button Name="MinimizeButton" Grid.Column="2" Width="32" Height="32" Background="#252525" Click="MinimizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Minimize.png"/>
+                <Button Name="MaximizeButton" Grid.Column="3" Width="32" Height="32" Background="#252525" Click="MaximizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Maximize.png"/>
+                <Button Name="CloseButton" Grid.Column="4" Width="32"  Background="#252525" BorderThickness="0" Click="CloseButtonClick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Border x:Name="ButtonBorder" Background="#252525" BorderThickness="0"/>
+                                <Image Source="pack://application:,,,/Images/Close.png" Stretch="Uniform"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="ButtonBorder" Property="Background" Value="Red"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="ButtonBorder" Property="Background" Value="Red"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Border>
+        <Border Name="RadarScope" Grid.Row="1" Background="Black"/>
+        <Popup x:Name="MenuPopup" Placement="Bottom" PlacementTarget="{Binding ElementName=MenuButton}" StaysOpen="False" AllowsTransparency="True">
+            <Border Background="#252525" BorderBrush="#505050" BorderThickness="1" Width="275" Height="400" Cursor="Arrow">
+                <StackPanel>
+                    <Button Name="ConnectButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Connect"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+F12"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Button Name="SaveProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="SaveProfileButtonClick" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Save Profile"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+S"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Button Name="SaveProfileAsButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="SaveProfileAsButtonClick" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Save Profile As"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+Shift+S"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Button Name="LoadProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="LoadProfileButtonClick" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Load Profile"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+L"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Button Name="ConfigSettingsButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Config Settings"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+C"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>
