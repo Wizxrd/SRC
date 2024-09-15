@@ -495,13 +495,13 @@
     "C:\\Users\\nicks\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "restore": {
-      "projectUniqueName": "D:\\SRCClient\\SRCClient.csproj",
+      "projectUniqueName": "D:\\SRC\\SRCClient.csproj",
       "projectName": "SRCClient",
-      "projectPath": "D:\\SRCClient\\SRCClient.csproj",
+      "projectPath": "D:\\SRC\\SRCClient.csproj",
       "packagesPath": "C:\\Users\\nicks\\.nuget\\packages\\",
-      "outputPath": "D:\\SRCClient\\obj\\",
+      "outputPath": "D:\\SRC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicks\\AppData\\Roaming\\NuGet\\NuGet.Config",

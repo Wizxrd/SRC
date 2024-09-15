@@ -10,17 +10,19 @@ namespace SRCClient
 {
     public partial class MainWindow : Window
     {
+        private string VERSION = "0.0.2";
         public JObject? config;
         public MainWindow()
         {
             LoadFile.DEBUG = true;
             InitializeComponent();
             Logger.Wipe();
-            Logger.Debug("SRCClient", "Loading v0.0.1");
+            Logger.Debug("SRCClient", $"Loading v{VERSION}");
             InitializeConfig();
             InitializeCursor();
             InitializeEvents();
         }
+
         // Initializers
         private void InitializeConfig()
         {
@@ -57,7 +59,6 @@ namespace SRCClient
         }
 
         // Events
-
         private void MainWindowKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.LeftShift))
@@ -67,16 +68,22 @@ namespace SRCClient
                     OpenSaveProfileAsWindow();
                 }
             }
+            else if (Keyboard.IsKeyDown(Key.LeftCtrl))
+            {
+                if (e.Key == Key.L)
+                {
+                    OpenLoadProfileWindow();
+                }
+            }
         }
 
         // Button Handlers
-
         private void MenuButtonClick(object sender, RoutedEventArgs e)
         {
             MenuPopup.IsOpen = !MenuPopup.IsOpen;
         }
 
-        private void BorderMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void BorderMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
             {
@@ -129,12 +136,12 @@ namespace SRCClient
 
         private void LoadProfileButtonClick(Object sender, RoutedEventArgs e)
         {
-
+            MenuPopup.IsOpen = !MenuPopup.IsOpen;
+            OpenLoadProfileWindow();
         }
 
         // Core Functions
-
-        private async void OpenSaveProfileAsWindow()
+        private void OpenSaveProfileAsWindow()
         {
             SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this);
             //await Task.Delay(1);
@@ -144,6 +151,17 @@ namespace SRCClient
                 saveProfileAsWindow.Left = this.Left + (this.ActualWidth - saveProfileAsWindow.ActualWidth) / 2;
             };
             saveProfileAsWindow.ShowDialog();
+        }
+
+        private void OpenLoadProfileWindow()
+        {
+            LoadProfileWindow loadProfileWindow = new LoadProfileWindow();
+            loadProfileWindow.Loaded += (s, ev) =>
+            {
+                loadProfileWindow.Top = this.Top + (this.ActualHeight - loadProfileWindow.ActualHeight) / 2;
+                loadProfileWindow.Left = this.Left + (this.ActualWidth - loadProfileWindow.ActualWidth) / 2;
+            };
+            loadProfileWindow.ShowDialog();
         }
     }
 }

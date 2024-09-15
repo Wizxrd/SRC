@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "SRCClient/0.0.1": {
+      "SRCClient/0.0.2": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
           "OpenTK": "4.8.2",
@@ -184,7 +184,7 @@
     }
   },
   "libraries": {
-    "SRCClient/0.0.1": {
+    "SRCClient/0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

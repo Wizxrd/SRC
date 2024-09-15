@@ -1,6 +1,1 @@
-9/13/2024 23:46:20 | DEBUG | SRCClient | Loading v0.0.1
-9/13/2024 23:46:20 | ERROR | MainWindow.LoadConfig | Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
-   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
-   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
-   at Newtonsoft.Json.Linq.JObject.Parse(String json)
-   at SRCClient.MainWindow.InitializeConfig() in D:\SRCClient\MainWindow.xaml.cs:line 29
+9/14/2024 22:30:44 | DEBUG | SRCClient | Loading v0.0.1

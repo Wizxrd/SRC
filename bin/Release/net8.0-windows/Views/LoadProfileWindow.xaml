@@ -1,0 +1,92 @@
+﻿<Window x:Class="SRCClient.Views.LoadProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SRCClient.Views"
+        mc:Ignorable="d"
+        Width="300"
+        Height="500"
+        ResizeMode="NoResize">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ControlTemplate x:Key="ProfileTemplate" TargetType="Button">
+            <Grid>
+                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}"/>
+                <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Grid>
+                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#252525"/>
+                    <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="#38b6ff"/>
+                    <Setter TargetName="ButtonBorder" Property="BorderThickness" Value="1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="#252525"/>
+                    <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="#38b6ff"/>
+                    <Setter TargetName="ButtonBorder" Property="BorderThickness" Value="1"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CloseButtonTemplate" TargetType="Button">
+            <Grid>
+                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" BorderThickness="0"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="Red"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonBorder" Property="Background" Value="Red"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Border Background="#252525">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="#303030" BorderThickness="1" MouseDown="BorderMouseDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Width="20" Height="20" Source="pack://application:,,,/Images/LoadProfile.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
+                    <TextBlock Text="Load Profile" Grid.Column="1" Foreground="White" FontFamily="Consolas" FontSize="12" VerticalAlignment="Center" Margin="5"/>
+                    <Button ToolTip="Close"  Grid.Column="2" Width="40" Height="Auto" Background="#252525" Click="CloseButtonClick" Template="{StaticResource CloseButtonTemplate}">
+                        <Image Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Source="pack://application:,,,/Images/Close.png"/>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border Name="ProfilesBorder" Grid.Row="1" Height="Auto" VerticalAlignment="Top">
+                <StackPanel Name="ProfileStack">
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Height="48" VerticalAlignment="Bottom">
+                <Button Name="NewProfileButton" Content="New Profile" Background="#353535" Foreground="White" BorderBrush="#38b6ff" BorderThickness="1" Width="96" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

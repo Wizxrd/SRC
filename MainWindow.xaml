@@ -41,7 +41,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Name="TitleBorder" Grid.Row="0" Height="32" VerticalAlignment="Top" Background="#252525" MouseDown="BorderMouseLeftButtonDown" Cursor="Arrow">
+        <Border Name="TitleBorder" Grid.Row="0" Height="32" VerticalAlignment="Top" Background="#252525" MouseDown="BorderMouseDown" Cursor="Arrow">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -50,11 +50,11 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Button Name="MenuButton" Grid.Column="0" Width="32" Height="32" Background="#252525" Click="MenuButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Menu.png"/>
+                <Button Name="MenuButton" ToolTip="Menu" Grid.Column="0" Width="32" Height="32" Background="#252525" Click="MenuButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Menu.png"/>
                 <TextBlock Name="Title" Grid.Column="1" Text="SRC" VerticalAlignment="Center" Foreground="White" Margin="5" FontFamily="Consolas" FontWeight="Bold" FontSize="12"/>
-                <Button Name="MinimizeButton" Grid.Column="2" Width="32" Height="32" Background="#252525" Click="MinimizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Minimize.png"/>
-                <Button Name="MaximizeButton" Grid.Column="3" Width="32" Height="32" Background="#252525" Click="MaximizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Maximize.png"/>
-                <Button Name="CloseButton" Grid.Column="4" Width="32"  Background="#252525" BorderThickness="0" Click="CloseButtonClick">
+                <Button Name="MinimizeButton" ToolTip="Minimize" Grid.Column="2" Width="32" Height="32" Background="#252525" Click="MinimizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Minimize.png"/>
+                <Button Name="MaximizeButton" ToolTip="Maximize" Grid.Column="3" Width="32" Height="32" Background="#252525" Click="MaximizeButtonClick" Template="{StaticResource TitleBarTemplate}" Tag="pack://application:,,,/Images/Maximize.png"/>
+                <Button Name="CloseButton" ToolTip="Close" Grid.Column="4" Width="32"  Background="#252525" BorderThickness="0" Click="CloseButtonClick">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Grid>
@@ -99,6 +99,34 @@
                                         FontSize="12"
                                         Foreground="White"
                                         Text="Ctrl+F12"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Button Name="LoadProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="LoadProfileButtonClick" Template="{StaticResource MenuButtonTemplate}">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Load Profile"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+L"
                                         TextAlignment="Right"
                                         VerticalAlignment="Center"
                                         Padding="30"/>
@@ -155,34 +183,6 @@
                                         FontSize="12"
                                         Foreground="White"
                                         Text="Ctrl+Shift+S"
-                                        TextAlignment="Right"
-                                        VerticalAlignment="Center"
-                                        Padding="30"/>
-                                </Grid>
-                            </DataTemplate>
-                        </Button.ContentTemplate>
-                    </Button>
-                    <Button Name="LoadProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="LoadProfileButtonClick" Template="{StaticResource MenuButtonTemplate}">
-                        <Button.ContentTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="125"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock
-                                        Grid.Column="0"
-                                        FontSize="12"
-                                        Foreground="White"
-                                        Text="Load Profile"
-                                        TextAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Padding="10"/>
-                                    <TextBlock
-                                        Grid.Column="1"
-                                        FontSize="12"
-                                        Foreground="White"
-                                        Text="Ctrl+L"
                                         TextAlignment="Right"
                                         VerticalAlignment="Center"
                                         Padding="30"/>

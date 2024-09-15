@@ -8,7 +8,7 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
     <StartupObject></StartupObject>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <ApplicationIcon>Images\SRC.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -17,10 +17,14 @@
     <None Remove="Cursors\ScopeMedium.cur" />
     <None Remove="Cursors\ScopeSmall.cur" />
     <None Remove="Images\Close.png" />
+    <None Remove="Images\Copy.png" />
+    <None Remove="Images\Delete.png" />
+    <None Remove="Images\LoadProfile.png" />
     <None Remove="Images\Maximize.png" />
     <None Remove="Images\MaximizeMinimize.png" />
     <None Remove="Images\Menu.png" />
     <None Remove="Images\Minimize.png" />
+    <None Remove="Images\Rename.png" />
     <None Remove="Images\SaveProfileAs.png" />
     <None Remove="Images\SRC.ico" />
   </ItemGroup>
@@ -36,10 +40,14 @@
     <Resource Include="Cursors\ScopeMedium.cur" />
     <Resource Include="Cursors\ScopeSmall.cur" />
     <Resource Include="Images\Close.png" />
+    <Resource Include="Images\Copy.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\LoadProfile.png" />
     <Resource Include="Images\Maximize.png" />
     <Resource Include="Images\MaximizeMinimize.png" />
     <Resource Include="Images\Menu.png" />
     <Resource Include="Images\Minimize.png" />
+    <Resource Include="Images\Rename.png" />
     <Resource Include="Images\SaveProfileAs.png" />
     <Resource Include="Images\SRC.ico" />
   </ItemGroup>

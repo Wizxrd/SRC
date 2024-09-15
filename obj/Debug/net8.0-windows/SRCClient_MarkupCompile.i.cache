@@ -1,20 +1,20 @@
 ﻿SRCClient
-0.0.1.0
+0.0.2.0
 
 winexe
 C#
 .cs
-D:\SRCClient\obj\Debug\net8.0-windows\
+D:\SRC\obj\Debug\net8.0-windows\
 SRCClient
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\SRCClient\App.xaml
-2-1084623858
+D:\SRC\App.xaml
+3-1738717054
 
-101450617915
+11-2102996715
 2181354026893
-MainWindow.xaml;Views\SaveProfileAsWindow.xaml;
+MainWindow.xaml;Views\LoadProfileWindow.xaml;Views\SaveProfileAsWindow.xaml;
 
 False
 
