@@ -10,7 +10,9 @@ namespace SRCClient
 {
     public partial class MainWindow : Window
     {
-        private string VERSION = "0.0.2";
+        private string VERSION = "0.0.3";
+        public string LoadedProfile = string.Empty;
+        public string CursorFile = string.Empty;
         public JObject? config;
         public MainWindow()
         {
@@ -45,6 +47,7 @@ namespace SRCClient
             string cursor = config["Cursor"]?.ToString() ?? string.Empty;
             if (cursor != string.Empty)
             {
+                CursorFile = cursor;
                 this.Cursor = new System.Windows.Input.Cursor(System.Windows.Application.GetResourceStream(new Uri($"pack://application:,,,/Cursors/{cursor}", UriKind.Absolute)).Stream);
             }
             else
@@ -70,7 +73,19 @@ namespace SRCClient
             }
             else if (Keyboard.IsKeyDown(Key.LeftCtrl))
             {
-                if (e.Key == Key.L)
+                if (e.Key == Key.M)
+                {
+                    MenuPopup.IsOpen = !MenuPopup.IsOpen;
+                }
+                else if (e.Key == Key.F12)
+                {
+                    // Connect
+                }
+                else if (e.Key == Key.S)
+                {
+                    SaveProfile();
+                }
+                else if (e.Key == Key.L)
                 {
                     OpenLoadProfileWindow();
                 }
@@ -94,6 +109,11 @@ namespace SRCClient
         private void MinimizeButtonClick(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        public void SetMainWindowGridMargin(int thickness)
+        {
+            MainWindowGrid.Margin = new Thickness(thickness);
         }
 
         private void MaximizeButtonClick(object sender, RoutedEventArgs e)
@@ -126,7 +146,7 @@ namespace SRCClient
 
         private void SaveProfileButtonClick(object sender, RoutedEventArgs e)
         {
-
+            SaveProfile();
         }
         private void SaveProfileAsButtonClick(object sender, RoutedEventArgs e)
         {
@@ -140,26 +160,36 @@ namespace SRCClient
             OpenLoadProfileWindow();
         }
 
-        // Core Functions
+        // Core
+
+        private void SaveProfile()
+        {
+            if (LoadedProfile != string.Empty)
+            {
+                Profile.Save(LoadedProfile, this);
+            }
+            else
+            {
+                Sound.Play("Error");
+                Logger.Warning("MainWindow.SaveProfile", "No Profile Loaded!");
+            }
+        }
         private void OpenSaveProfileAsWindow()
         {
-            SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this);
-            //await Task.Delay(1);
-            saveProfileAsWindow.Loaded += (s, ev) =>
+            SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this)
             {
-                saveProfileAsWindow.Top = this.Top + (this.ActualHeight - saveProfileAsWindow.ActualHeight) / 2;
-                saveProfileAsWindow.Left = this.Left + (this.ActualWidth - saveProfileAsWindow.ActualWidth) / 2;
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
             };
             saveProfileAsWindow.ShowDialog();
         }
 
         private void OpenLoadProfileWindow()
         {
-            LoadProfileWindow loadProfileWindow = new LoadProfileWindow();
-            loadProfileWindow.Loaded += (s, ev) =>
+            LoadProfileWindow loadProfileWindow = new LoadProfileWindow(this)
             {
-                loadProfileWindow.Top = this.Top + (this.ActualHeight - loadProfileWindow.ActualHeight) / 2;
-                loadProfileWindow.Left = this.Left + (this.ActualWidth - loadProfileWindow.ActualWidth) / 2;
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
             };
             loadProfileWindow.ShowDialog();
         }

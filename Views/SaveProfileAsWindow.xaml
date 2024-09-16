@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SRCClient.Views"
         mc:Ignorable="d"
+        FontFamily="Consolas" FontSize="12"
         Width="300"
         Height="150"
         ResizeMode="NoResize"
@@ -58,18 +59,18 @@
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Width="20" Height="20" Source="pack://application:,,,/Images/SaveProfileAs.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
                     <TextBlock Text="Save Profile As" Grid.Column="1" Foreground="White" FontFamily="Consolas" FontSize="12" VerticalAlignment="Center" Margin="5"/>
-                    <Button Name="CloseSaveProfileAsButton" Grid.Column="2" Width="40" Height="Auto" Background="#252525" Click="CloseButtonClick" Template="{StaticResource CloseButtonTemplate}">
+                    <Button Name="CloseSaveProfileAsButton" ToolTip="Close" Grid.Column="2" Width="40" Height="Auto" Background="#252525" Click="CloseButtonClick" Template="{StaticResource CloseButtonTemplate}">
                         <Image Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Left" Source="pack://application:,,,/Images/Close.png"/>
                     </Button>
                 </Grid>
             </Border>
             <TextBlock Grid.Row="1" Text="Profile Name:" Foreground="White" Margin="12,12,12,6"/>
             <TextBox Name="ProfileNameTextBox" Grid.Row="2" Height="24" FontFamily="Consolas" TextAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Width="275" Background="#505050" Foreground="White"/>
-            <Button IsEnabled="False" Name="SaveProfileButton" Content="Save Profile" Grid.Row="3" Width="75" Height="24" Background="#353535" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,10,74,0" Click="SaveProfieButtonClick">
+            <Button IsEnabled="False" Name="SaveProfileButton" Content="Save Profile" Grid.Row="3" Width="90" Height="24" Background="#252525" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,10,74,0" Click="SaveProfileButtonClick">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
-                            <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="RoyalBlue"/>
+                            <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="#38b6ff"/>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Grid>
                         <ControlTemplate.Triggers>

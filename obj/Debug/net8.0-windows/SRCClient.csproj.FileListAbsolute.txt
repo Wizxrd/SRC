@@ -85,3 +85,12 @@ D:\SRC\obj\Debug\net8.0-windows\refint\SRCClient.dll
 D:\SRC\obj\Debug\net8.0-windows\SRCClient.pdb
 D:\SRC\obj\Debug\net8.0-windows\SRCClient.genruntimeconfig.cache
 D:\SRC\obj\Debug\net8.0-windows\ref\SRCClient.dll
+D:\SRC\obj\Debug\net8.0-windows\Views\ConfirmDeleteProfileWindow.baml
+D:\SRC\obj\Debug\net8.0-windows\Views\ConfirmDeleteProfileWindow.g.cs
+D:\SRC\bin\Debug\net8.0-windows\NAudio.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.Asio.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.Core.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.Midi.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+D:\SRC\bin\Debug\net8.0-windows\NAudio.WinMM.dll

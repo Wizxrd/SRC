@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SRCClient.Views"
         mc:Ignorable="d"
+        FontFamily="Consolas" FontSize="12"
         Width="300"
         Height="500"
         ResizeMode="NoResize">
@@ -14,7 +15,7 @@
     <Window.Resources>
         <ControlTemplate x:Key="ProfileTemplate" TargetType="Button">
             <Grid>
-                <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}"/>
+                <Border x:Name="ButtonBorder" BorderBrush="#38b6ff" BorderThickness="0" Background="{TemplateBinding Background}"/>
                 <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Grid>
             <ControlTemplate.Triggers>

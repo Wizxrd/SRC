@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\SRC\\SRCClient.csproj": {
-      "version": "0.0.2",
+      "version": "0.0.3",
       "restore": {
         "projectUniqueName": "D:\\SRC\\SRCClient.csproj",
         "projectName": "SRCClient",
@@ -40,6 +40,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"

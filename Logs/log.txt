@@ -1,1 +1,4 @@
-9/14/2024 22:42:26 | DEBUG | SRCClient | Loading v0.0.2
+9/16/2024 1:43:45 | DEBUG | SRCClient | Loading v0.0.3
+9/16/2024 1:43:52 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Deleted
+9/16/2024 1:43:54 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Deleted
+9/16/2024 1:43:55 | DEBUG | Profile.Load | Profile: "Cursor Testing" Successfully Deleted

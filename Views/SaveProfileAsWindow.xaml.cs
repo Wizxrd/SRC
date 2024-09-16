@@ -17,18 +17,20 @@ namespace SRCClient.Views
 {
     public partial class SaveProfileAsWindow : Window
     {
-        Window? mainWindow;
+        MainWindow? mainWindow;
         public SaveProfileAsWindow(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
             InitializeComponent();
             InitializeEvents();
+            ProfileNameTextBox.Focus();
         }
 
         // Initializers
         private void InitializeEvents()
         {
             ProfileNameTextBox.TextChanged += ProfileNameTextBoxTextChanged;
+            ProfileNameTextBox.KeyDown += ProfileNameTextBoxKeyDown;
         }
 
         // Events
@@ -41,6 +43,14 @@ namespace SRCClient.Views
             else
             {
                 SaveProfileButton.IsEnabled = false;
+            }
+        }
+
+        private void ProfileNameTextBoxKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SaveProfileAs();
             }
         }
 
@@ -58,12 +68,18 @@ namespace SRCClient.Views
             this.Close();
         }
 
-        private void SaveProfieButtonClick(object sender, RoutedEventArgs e)
+        private void SaveProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+            SaveProfileAs();
+        }
+
+        // Core
+        private void SaveProfileAs()
         {
             string profileName = ProfileNameTextBox.Text;
             if (mainWindow != null)
             {
-                Profile.Save(profileName, mainWindow);
+                Profile.SaveAs(profileName, mainWindow);
                 this.Close();
             }
         }

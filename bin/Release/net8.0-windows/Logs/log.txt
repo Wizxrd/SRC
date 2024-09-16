@@ -1,1 +1,4 @@
-9/14/2024 22:42:40 | DEBUG | SRCClient | Loading v0.0.2
+9/16/2024 1:45:29 | DEBUG | SRCClient | Loading v0.0.3
+9/16/2024 1:45:35 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
+9/16/2024 1:45:42 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
+9/16/2024 1:45:53 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded

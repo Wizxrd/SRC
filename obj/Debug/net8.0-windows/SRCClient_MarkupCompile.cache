@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\SRC\App.xaml
-3-1738717054
+4-1944256236
 
-921003972
-2181354026893
-MainWindow.xaml;Views\LoadProfileWindow.xaml;Views\SaveProfileAsWindow.xaml;
+11-1592043440
+2251935885134
+MainWindow.xaml;Views\ConfirmDeleteProfileWindow.xaml;Views\LoadProfileWindow.xaml;Views\SaveProfileAsWindow.xaml;
 
 False
 

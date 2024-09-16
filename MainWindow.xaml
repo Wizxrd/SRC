@@ -1,7 +1,7 @@
 ﻿<Window x:Class="SRCClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Width="1280" Height="720" FontFamily="Consolas" FontSize="12" FontWeight="Bold"
+        Width="1280" Height="720" FontFamily="Consolas" FontSize="12"
         Icon="pack://application:,,,/Images/SRC.ico">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
@@ -202,7 +202,7 @@
                                         Grid.Column="0"
                                         FontSize="12"
                                         Foreground="White"
-                                        Text="Config Settings"
+                                        Text="General Settings"
                                         TextAlignment="Left"
                                         VerticalAlignment="Center"
                                         Padding="10"/>
@@ -210,7 +210,7 @@
                                         Grid.Column="1"
                                         FontSize="12"
                                         Foreground="White"
-                                        Text="Ctrl+C"
+                                        Text="Ctrl+G"
                                         TextAlignment="Right"
                                         VerticalAlignment="Center"
                                         Padding="30"/>

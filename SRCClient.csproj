@@ -8,7 +8,7 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
     <StartupObject></StartupObject>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <ApplicationIcon>Images\SRC.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -24,12 +24,14 @@
     <None Remove="Images\MaximizeMinimize.png" />
     <None Remove="Images\Menu.png" />
     <None Remove="Images\Minimize.png" />
+    <None Remove="Images\Question.png" />
     <None Remove="Images\Rename.png" />
     <None Remove="Images\SaveProfileAs.png" />
     <None Remove="Images\SRC.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="OpenTK" Version="4.8.2" />
     <PackageReference Include="OpenTK.GLControl" Version="4.0.1" />
@@ -47,6 +49,7 @@
     <Resource Include="Images\MaximizeMinimize.png" />
     <Resource Include="Images\Menu.png" />
     <Resource Include="Images\Minimize.png" />
+    <Resource Include="Images\Question.png" />
     <Resource Include="Images\Rename.png" />
     <Resource Include="Images\SaveProfileAs.png" />
     <Resource Include="Images\SRC.ico" />
