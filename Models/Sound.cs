@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SRCClient.Models
 {
-    internal class Sound
+    public class Sound
     {
         public static void Play(string fileName)
         {

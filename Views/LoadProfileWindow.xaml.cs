@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using Newtonsoft.Json;
+using Microsoft.Win32;
 
 namespace SRCClient.Views
 {
@@ -41,6 +41,12 @@ namespace SRCClient.Views
         private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void ReloadProfileStack()
+        {
+            ProfileStack.Children.Clear();
+            LoadProfileButtons();
         }
 
         private System.Windows.Controls.Button? FindParentButton(System.Windows.Controls.TextBox textBox)
@@ -80,10 +86,33 @@ namespace SRCClient.Views
                     }
                 }
                 profileNames = profileNames.OrderBy(p => p, StringComparer.OrdinalIgnoreCase).ToList();
+                List<System.Windows.Controls.Button> buttons = new List<System.Windows.Controls.Button>();
+                double maxWidth = 300.0;
                 foreach (string profileName in profileNames)
                 {
-                    CreateProfileButton(profileName);
+                    System.Windows.Controls.Button? button = CreateProfileButton(profileName);
+                    if (button != null)
+                    {
+                        buttons.Add(button);
+                        if (button.Width > maxWidth)
+                        {
+                            maxWidth = button.Width;
+                        }
+                    }
                 }
+                foreach (System.Windows.Controls.Button button in buttons)
+                {
+                    button.Width = maxWidth;
+                }
+                if (ProfileScrollBar.VerticalScrollBarVisibility == ScrollBarVisibility.Auto)
+                {
+                    this.Width += 20;
+                }
+                else
+                {
+                    this.Width -= 20;
+                }
+                Logger.Debug("F", this.Width.ToString());
             }
             catch (Exception ex)
             {
@@ -101,22 +130,26 @@ namespace SRCClient.Views
                     Width = 32,
                     Height = 32,
                     Margin = new Thickness(5, 0, 0, 0),
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Right,
                     VerticalAlignment = VerticalAlignment.Center,
                     BorderThickness = new Thickness(1),
                     BorderBrush = new SolidColorBrush(System.Windows.Media.Color.FromRgb(56, 182, 255)),
                     ToolTip = toopTip,
-                    Template = (ControlTemplate)this.Resources["ButtonTemplate"],
-                    Tag = parent
+                    Template = (ControlTemplate)this.Resources["ProfileSubButtonTemplate"],
+                    Tag = parent,
+                    Content = new System.Windows.Controls.Image
+                    {
+                        Width = 16,
+                        Height = 16,
+                        Source = new BitmapImage(new Uri(imageSource, UriKind.Absolute)),
+                    },
+                };
+                button.Click += clickHandler;
+                button.PreviewMouseDoubleClick += (s, e) =>
+                {
+                    e.Handled = true;
                 };
 
-                System.Windows.Controls.Image image = new System.Windows.Controls.Image
-                {
-                    Width = 16,
-                    Height = 16,
-                    Source = new BitmapImage(new Uri(imageSource, UriKind.Absolute))
-                };
-                button.Content = image;
-                button.Click += clickHandler;
                 return button;
             }
             catch(Exception ex)
@@ -126,7 +159,7 @@ namespace SRCClient.Views
             }
         }
 
-        public  void CreateProfileButton(string profileName)
+        public System.Windows.Controls.Button? CreateProfileButton(string profileName)
         {
             try
             {
@@ -135,10 +168,11 @@ namespace SRCClient.Views
                     Name = profileName.Replace(" ", "_"),
                     Width = 300,
                     Height = 32,
+                    Margin = new Thickness(0, 0, 10, 0),
                     Background = new SolidColorBrush(Colors.Transparent),
                     VerticalAlignment = VerticalAlignment.Top,
-                    HorizontalContentAlignment = System.Windows.HorizontalAlignment.Stretch,
-                    Template = (ControlTemplate)this.Resources["ProfileTemplate"]
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Left,
+                    Template = (ControlTemplate)this.Resources["ProfileButtonTemplate"]
                 };
                 Grid grid = new Grid();
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
@@ -150,6 +184,7 @@ namespace SRCClient.Views
                     VerticalAlignment = VerticalAlignment.Center,
                     Margin = new Thickness(10, 0, 0, 0)
                 };
+
                 Grid.SetColumn(textBlock, 0);
                 grid.Children.Add(textBlock);
                 StackPanel stackPanel = new StackPanel
@@ -162,9 +197,9 @@ namespace SRCClient.Views
                 button.Click += ProfileButtonClick;
                 button.MouseDoubleClick += ProfileButtonMouseDoubleClick;
 
-                System.Windows.Controls.Button? renameButton = CreateProfileSubButtons("Rename Profile", "pack://application:,,,/Images/Rename.png", button, RenameButtonClick);
-                System.Windows.Controls.Button? copyButton = CreateProfileSubButtons("Copy Profile", "pack://application:,,,/Images/Copy.png", button, CopyButtonClick);
-                System.Windows.Controls.Button? deleteButton = CreateProfileSubButtons("Delete Profile", "pack://application:,,,/Images/Delete.png", button, DeleteButtonClick);
+                System.Windows.Controls.Button? renameButton = CreateProfileSubButtons("Rename Profile", "pack://application:,,,/Images/Rename.png", button, RenameProfileButtonClick);
+                System.Windows.Controls.Button? copyButton = CreateProfileSubButtons("Copy Profile", "pack://application:,,,/Images/Copy.png", button, CopyProfileButtonClick);
+                System.Windows.Controls.Button? deleteButton = CreateProfileSubButtons("Delete Profile", "pack://application:,,,/Images/Delete.png", button, DeleteProfileButtonClick);
 
                 if (renameButton != null && copyButton != null && deleteButton != null)
                 {
@@ -174,6 +209,23 @@ namespace SRCClient.Views
                     grid.Children.Add(stackPanel);
                     button.Content = grid;
                     ProfileStack.Children.Add(button);
+                    textBlock.Measure(new System.Windows.Size(double.PositiveInfinity, double.PositiveInfinity));
+                    double textWidth = textBlock.DesiredSize.Width;
+                    double subButtonWidth = (renameButton.Width + copyButton.Width + deleteButton.Width) + (stackPanel.Margin.Left + stackPanel.Margin.Right);
+                    double padding = 15;
+
+                    double requiredWidth = textWidth + subButtonWidth + padding;
+                    if (requiredWidth > button.Width)
+                    {
+                        Logger.Debug("T", requiredWidth.ToString());
+                        button.Width = requiredWidth;
+                        this.Width = requiredWidth;
+                    }
+                    else
+                    { 
+                        this.Width = this.MinWidth;
+                    }
+                    return button;
                 }
                 else
                 {
@@ -184,6 +236,7 @@ namespace SRCClient.Views
             {
                 Logger.Error("LoadProfileWindow.CreateProfileButton", ex.ToString());
             }
+            return null;
         }
 
         private void ProfileButtonClick(object sender, RoutedEventArgs e)
@@ -225,7 +278,7 @@ namespace SRCClient.Views
             }
         }
 
-        private void RenameButtonClick(object sender, RoutedEventArgs e)
+        private void RenameProfileButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -278,6 +331,7 @@ namespace SRCClient.Views
                         VerticalAlignment = VerticalAlignment.Center,
                         HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
                     };
+                    newTextBox.CaretBrush = System.Windows.Media.Brushes.White;
                     newTextBox.KeyDown += TextBoxKeyDown;
                     grid.Children.Remove(textBlock);
                     Grid.SetColumn(newTextBox, 0);
@@ -336,7 +390,6 @@ namespace SRCClient.Views
                     Grid.SetColumn(newTextBlock, 0);
                     grid.Children.Add(newTextBlock);
                     Profile.Rename(oldName, newName);
-                    ProfileStack.Children.Clear();
                     ReloadProfileStack();
                 }
             }
@@ -346,13 +399,7 @@ namespace SRCClient.Views
             }
         }
 
-        private void ReloadProfileStack()
-        {
-            ProfileStack.Children.Clear();
-            LoadProfileButtons();
-        }
-
-        private void CopyButtonClick(object sender, RoutedEventArgs e)
+        private void CopyProfileButtonClick(object sender, RoutedEventArgs e)
         {
             var button = sender as System.Windows.Controls.Button;
             if (button == null) return;
@@ -362,7 +409,7 @@ namespace SRCClient.Views
             ReloadProfileStack();
         }
 
-        private void DeleteButtonClick(object sender, RoutedEventArgs e)
+        private void DeleteProfileButtonClick(object sender, RoutedEventArgs e)
         {
             var button = sender as System.Windows.Controls.Button;
             if (button == null) return;
@@ -378,8 +425,36 @@ namespace SRCClient.Views
             if (confirmDeleteProfileWindow.DeletionConfirmed)
             {
                 ProfileStack.Children.Remove(parentButton);
-                Profile.Delete(profileName, mainWindow);
+                if (mainWindow != null)
+                {
+                    Profile.Delete(profileName, mainWindow);
+                    ReloadProfileStack();
+                }
             }
+        }
+
+        private void NewProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ImportProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Title = "Import Profile",
+                Filter = "JSON File (*.json)|*.json",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            };
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string filePath = openFileDialog.FileName;
+            }
+        }
+
+        private void DeleteAllProfilesButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

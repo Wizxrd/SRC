@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SRCClient.Models
 {
-    internal class Logger
+    public class Logger
     {
         public static void Wipe()
         {

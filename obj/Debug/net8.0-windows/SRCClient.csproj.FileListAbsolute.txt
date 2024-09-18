@@ -94,3 +94,5 @@ D:\SRC\bin\Debug\net8.0-windows\NAudio.Midi.dll
 D:\SRC\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
 D:\SRC\bin\Debug\net8.0-windows\NAudio.WinForms.dll
 D:\SRC\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+D:\SRC\obj\Debug\net8.0-windows\Views\ConfirmSaveProfileWindow.g.cs
+D:\SRC\obj\Debug\net8.0-windows\Views\ConfirmSaveProfileWindow.baml

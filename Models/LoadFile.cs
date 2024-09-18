@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SRCClient.Models
 {
-    internal class LoadFile
+    public class LoadFile
     {
         public static bool DEBUG = true;
 

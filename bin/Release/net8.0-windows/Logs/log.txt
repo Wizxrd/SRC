@@ -1,4 +1,63 @@
-9/16/2024 1:45:29 | DEBUG | SRCClient | Loading v0.0.3
-9/16/2024 1:45:35 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
-9/16/2024 1:45:42 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
-9/16/2024 1:45:53 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
+9/16/2024 1:47:38 | DEBUG | SRCClient | Loading v0.0.3
+9/16/2024 1:47:42 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
+9/16/2024 1:47:45 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Saved
+9/16/2024 1:47:47 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Saved
+9/16/2024 1:47:53 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Copied
+9/16/2024 1:47:55 | DEBUG | Profile.Load | Profile: "Test Profile Copy" Successfully Loaded
+9/16/2024 1:47:58 | DEBUG | Profile.Load | Profile: "Test Profile Copy" Successfully Saved
+9/16/2024 1:48:00 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Loaded
+9/16/2024 1:48:01 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Saved
+9/16/2024 1:48:04 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Saved
+9/16/2024 1:48:06 | DEBUG | Profile.Load | Profile: "Test Profile Copy" Successfully Loaded
+9/16/2024 1:48:11 | DEBUG | LoadProfileWindow.RenameButtonClick | TextBlock found. Converting to TextBox.
+9/16/2024 1:48:14 | DEBUG | Profile.Load | Profile: "Test Profile" Successfully Renamed To: "Old Profile"
+9/16/2024 1:48:19 | DEBUG | Profile.Load | Profile: "Test Profile Copy" Successfully Copied
+9/16/2024 1:48:21 | DEBUG | Profile.Load | Profile: "Test Profile Copy Copy" Successfully Deleted
+9/16/2024 1:48:22 | DEBUG | LoadProfileWindow.RenameButtonClick | TextBlock found. Converting to TextBox.
+9/16/2024 1:48:25 | DEBUG | Profile.Load | Profile: "Test Profile Copy" Successfully Renamed To: "New Profile"
+9/16/2024 1:48:26 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:48:28 | DEBUG | Profile.Load | Profile: "Old Profile" Successfully Loaded
+9/16/2024 1:48:30 | DEBUG | Profile.Load | Profile: "Old Profile" Successfully Saved
+9/16/2024 1:48:36 | DEBUG | Profile.Load | Profile: "Old Profile" Successfully Deleted
+9/16/2024 1:48:37 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Copied
+9/16/2024 1:48:37 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:48:41 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Copied
+9/16/2024 1:48:41 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Loaded
+9/16/2024 1:48:44 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy" Successfully Copied
+9/16/2024 1:48:45 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy Copy" Successfully Copied
+9/16/2024 1:48:46 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy" Successfully Copied
+9/16/2024 1:48:46 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy" Successfully Loaded
+9/16/2024 1:48:50 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Copied
+9/16/2024 1:48:50 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:49:23 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Copied
+9/16/2024 1:49:24 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Copied
+9/16/2024 1:49:26 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy Copy Copy" Successfully Deleted
+9/16/2024 1:49:27 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy Copy" Successfully Deleted
+9/16/2024 1:49:28 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy Copy" Successfully Deleted
+9/16/2024 1:49:29 | DEBUG | Profile.Load | Profile: "New Profile Copy Copy" Successfully Deleted
+9/16/2024 1:49:30 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Deleted
+9/16/2024 1:49:31 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Deleted
+9/16/2024 1:49:33 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Deleted
+9/16/2024 1:49:34 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Deleted
+9/16/2024 1:49:37 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Deleted
+9/16/2024 1:49:49 | DEBUG | SaveAs | None
+9/16/2024 1:49:49 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Saved As
+9/16/2024 1:49:49 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:49:53 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Saved
+9/16/2024 1:49:57 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Copied
+9/16/2024 1:49:59 | DEBUG | LoadProfileWindow.RenameButtonClick | TextBlock found. Converting to TextBox.
+9/16/2024 1:50:03 | DEBUG | Profile.Load | Profile: "New Profile Copy" Successfully Renamed To: "Newest Profile"
+9/16/2024 1:50:05 | DEBUG | Profile.Load | Profile: "Newest Profile" Successfully Loaded
+9/16/2024 1:50:08 | DEBUG | Profile.Load | Profile: "Newest Profile" Successfully Saved
+9/16/2024 1:50:10 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:50:13 | DEBUG | Profile.Load | Profile: "Newest Profile" Successfully Loaded
+9/16/2024 1:50:19 | DEBUG | Profile.Load | Profile: "Newest Profile" Successfully Deleted
+9/16/2024 1:50:21 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Deleted
+9/16/2024 1:50:24 | WARNING | MainWindow.SaveProfile | No Profile Loaded!
+9/16/2024 1:50:24 | WARNING | MainWindow.SaveProfile | No Profile Loaded!
+9/16/2024 1:50:35 | DEBUG | SaveAs | None
+9/16/2024 1:50:35 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Saved As
+9/16/2024 1:50:35 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:50:42 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Loaded
+9/16/2024 1:50:46 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Saved
+9/16/2024 1:50:48 | DEBUG | Profile.Load | Profile: "New Profile" Successfully Saved

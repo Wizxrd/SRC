@@ -2,11 +2,10 @@
 using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Windows;
-using System.Xml.Linq;
 
 namespace SRCClient.Models
 {
-    internal class Profile
+    public class Profile
     {
         private static string GenerateUniqueHash()
         {
@@ -76,7 +75,7 @@ namespace SRCClient.Models
                             mainWindow.Height = height;
                             mainWindow.Left = left;
                             mainWindow.Top = top;
-                            mainWindow.LoadedProfile = name;
+                            mainWindow.CurrentProfile = name;
                             mainWindow.Focus();
                             Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Loaded");
                             break;
@@ -106,7 +105,7 @@ namespace SRCClient.Models
                     if (profileName != string.Empty && profileName == name)
                     {
                         profile["Name"] = name;
-                        profile["Cursor"] = mainWindow.CursorFile;
+                        profile["Cursor"] = mainWindow.CurrentCursor;
                         profile["Window"]["Fullscreen"] = mainWindow.WindowState == WindowState.Maximized;
                         profile["Window"]["Size"]["Width"] = mainWindow.Width;
                         profile["Window"]["Size"]["Height"] = mainWindow.Height;
@@ -129,7 +128,7 @@ namespace SRCClient.Models
                 JObject profile = new JObject
                 {
                     { "Name", name },
-                    {"Cursor", mainWindow.CursorFile },
+                    { "Cursor", mainWindow.CurrentCursor },
                     { "Window", new JObject
                         {
                             {"Fullscreen", mainWindow.WindowState == WindowState.Maximized},
@@ -223,9 +222,9 @@ namespace SRCClient.Models
                     string profileName = profile["Name"]?.ToString() ?? string.Empty;
                     if (profileName != string.Empty && profileName == name)
                     {
-                        if (name == mainWindow.LoadedProfile)
+                        if (name == mainWindow.CurrentProfile)
                         {
-                            mainWindow.LoadedProfile = string.Empty;
+                            mainWindow.CurrentProfile = string.Empty;
                         }
                         File.Delete(file);
                         Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Deleted");
@@ -233,6 +232,15 @@ namespace SRCClient.Models
                     }
                 }
             }
+        }
+
+        public static void New(string name, MainWindow mainWindow)
+        {
+        }
+
+        public static void DeleteAll(string name, MainWindow mainWindow)
+        {
+
         }
     }
 }

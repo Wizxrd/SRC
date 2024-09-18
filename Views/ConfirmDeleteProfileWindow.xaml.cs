@@ -11,7 +11,9 @@ namespace SRCClient.Views
         public ConfirmDeleteProfileWindow(string profileName)
         {
             InitializeComponent();
-            MessageTextBlock.Text += $"\n\"{profileName}\"";
+            MessageTextBlock.Text += $" \"{profileName}\"";
+            MessageTextBlock.Measure(new System.Windows.Size(double.PositiveInfinity, double.PositiveInfinity));
+            this.Width = MessageTextBlock.DesiredSize.Width + 10;
         }
 
         private void BorderMouseDown(object sender, MouseButtonEventArgs e)

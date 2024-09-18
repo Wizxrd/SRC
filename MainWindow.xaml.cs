@@ -11,8 +11,9 @@ namespace SRCClient
     public partial class MainWindow : Window
     {
         private string VERSION = "0.0.3";
-        public string LoadedProfile = string.Empty;
-        public string CursorFile = string.Empty;
+        public string LastUsedProfile = string.Empty;
+        public string CurrentProfile = string.Empty;
+        public string CurrentCursor = string.Empty;
         public JObject? config;
         public MainWindow()
         {
@@ -20,40 +21,8 @@ namespace SRCClient
             InitializeComponent();
             Logger.Wipe();
             Logger.Debug("SRCClient", $"Loading v{VERSION}");
-            InitializeConfig();
-            InitializeCursor();
+            Config.Load(this);
             InitializeEvents();
-        }
-
-        // Initializers
-        private void InitializeConfig()
-        {
-            try
-            {
-                config = JObject.Parse(File.ReadAllText(LoadFile.Load("Config", "Config.json")));
-                this.Left = (int?)config["Window"]?["Location"]?["Left"] ?? 0;
-                this.Top = (int?)config["Window"]?["Location"]?["Top"] ?? 0;
-                this.Width = (int?)config["Window"]?["Size"]?["Width"] ?? 1280;
-                this.Height = (int?)config["Window"]?["Size"]?["Height"] ?? 720;
-            }
-            catch (Exception ex)
-            {
-                Logger.Error("MainWindow.LoadConfig", ex.ToString());
-            }
-        }
-
-        private void InitializeCursor()
-        {
-            string cursor = config["Cursor"]?.ToString() ?? string.Empty;
-            if (cursor != string.Empty)
-            {
-                CursorFile = cursor;
-                this.Cursor = new System.Windows.Input.Cursor(System.Windows.Application.GetResourceStream(new Uri($"pack://application:,,,/Cursors/{cursor}", UriKind.Absolute)).Stream);
-            }
-            else
-            {
-                Logger.Error("MainWindow.SetCursor", "Config.Cursor is null!");
-            }
         }
 
         private void InitializeEvents()
@@ -164,9 +133,9 @@ namespace SRCClient
 
         private void SaveProfile()
         {
-            if (LoadedProfile != string.Empty)
+            if (CurrentProfile != string.Empty)
             {
-                Profile.Save(LoadedProfile, this);
+                Profile.Save(CurrentProfile, this);
             }
             else
             {
