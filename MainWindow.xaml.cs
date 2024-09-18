@@ -20,7 +20,7 @@ namespace SRCClient
             LoadFile.DEBUG = true;
             InitializeComponent();
             Logger.Wipe();
-            Logger.Debug("SRCClient", $"Loading v{VERSION}");
+            Logger.Info("SRCClient", $"Loading v{VERSION}");
             Config.Load(this);
             InitializeEvents();
         }

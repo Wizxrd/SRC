@@ -8,7 +8,6 @@
         FontFamily="Consolas" FontSize="12"
         Width="300"
         MinWidth="300"
-        MaxWidth="300"
         Height="500"
         ResizeMode="NoResize">
     <WindowChrome.WindowChrome>
@@ -139,6 +138,7 @@
             <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
             <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
             <Setter Property="Width" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="MinWidth" Value="{Binding Width, RelativeSource={RelativeSource Self}}"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -190,14 +190,14 @@
                     </Button>
                 </Grid>
             </Border>
-            <Border Name="ProfilesBorder" Grid.Row="1" Height="Auto" VerticalAlignment="Top">
+            <Border Name="ProfilesBorder" Grid.Row="1" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <ScrollViewer Name="ProfileScrollBar" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Right" HorizontalScrollBarVisibility="Disabled">
-                        <StackPanel Grid.Column="0" Name="ProfileStack" CanVerticallyScroll="True">
+                        <StackPanel x:Name="ProfileStack" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0">
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
