@@ -16,6 +16,7 @@ namespace SRCClient.Views
         public LoadProfileWindow(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
+            Logger.Error("F", this.Width.ToString());
             InitializeComponent();
             InitializeEvents();
         }
@@ -87,7 +88,7 @@ namespace SRCClient.Views
                 }
                 profileNames = profileNames.OrderBy(p => p, StringComparer.OrdinalIgnoreCase).ToList();
                 List<System.Windows.Controls.Button> buttons = new List<System.Windows.Controls.Button>();
-                double maxWidth = 300.0;
+                double maxWidth = this.MinWidth;
                 foreach (string profileName in profileNames)
                 {
                     System.Windows.Controls.Button? button = CreateProfileButton(profileName);
@@ -96,7 +97,7 @@ namespace SRCClient.Views
                         buttons.Add(button);
                         if (button.Width > maxWidth)
                         {
-                            maxWidth = button.Width + 100;
+                            maxWidth = button.Width;
                         }
                     }
                 }
@@ -104,7 +105,7 @@ namespace SRCClient.Views
                 {
                     button.Width = maxWidth;
                 }
-                this.Width = maxWidth;
+                this.Width = maxWidth + 20;
                 if (ProfileScrollBar.ComputedVerticalScrollBarVisibility == Visibility.Visible)
                 {
                     this.Width += 10;
@@ -120,17 +121,12 @@ namespace SRCClient.Views
         {
             try
             {
-                int marginRight = 0;
-                if (toolTip.Contains("Delete"))
-                {
-                    marginRight = 10;
-                }
                 System.Windows.Controls.Button button = new System.Windows.Controls.Button
                 {
                     Background = System.Windows.Media.Brushes.Transparent,
                     Width = 32,
                     Height = 32,
-                    Margin = new Thickness(0, 0, marginRight, 0),
+                    Margin = new Thickness(0, 0, 0, 0),
                     HorizontalAlignment = System.Windows.HorizontalAlignment.Right,
                     VerticalAlignment = VerticalAlignment.Center,
                     BorderThickness = new Thickness(1),
@@ -167,45 +163,43 @@ namespace SRCClient.Views
                 System.Windows.Controls.Button button = new System.Windows.Controls.Button
                 {
                     Name = profileName.Replace(" ", "_"),
-                    Width = 300,
                     Height = 32,
-                    Margin = new Thickness(0,0, 10, 0), // Ensure no margin on all sides
-                    Padding = new Thickness(0,0,0,0), // Remove any padding as well
+                    Margin = new Thickness(10, 0, 10, 0),
+                    Padding = new Thickness(0, 0, 0, 0),
                     Background = new SolidColorBrush(Colors.Transparent),
                     VerticalAlignment = VerticalAlignment.Top,
                     HorizontalAlignment = System.Windows.HorizontalAlignment.Left,
                     Template = (ControlTemplate)this.Resources["ProfileButtonTemplate"]
                 };
-                Grid grid = new Grid();
-                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });  // First column takes up remaining space
-                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });  // Second column auto adjusts for buttons
 
-                // TextBlock for the profile name
+                // Create the Grid
+                Grid grid = new Grid();
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
                 TextBlock textBlock = new TextBlock
                 {
                     Text = profileName,
                     Foreground = System.Windows.Media.Brushes.White,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Padding = new Thickness(5, 0, 0, 0)
+                    Padding = new Thickness(5, 0, 0, 0),
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Left,
                 };
-
-                // Add the TextBlock to the first column
                 Grid.SetColumn(textBlock, 0);
                 grid.Children.Add(textBlock);
 
-                // StackPanel for sub-buttons (rename, copy, delete)
                 StackPanel stackPanel = new StackPanel
                 {
                     Orientation = System.Windows.Controls.Orientation.Horizontal,
                     VerticalAlignment = VerticalAlignment.Center,
+                    Margin = new Thickness(5, 0, 0, 0)
                 };
 
-                Grid.SetColumn(stackPanel, 1);  // Set StackPanel to the second column
+                Grid.SetColumn(stackPanel, 1);
 
                 button.Click += ProfileButtonClick;
                 button.MouseDoubleClick += ProfileButtonMouseDoubleClick;
 
-                // Add the sub buttons
+                // Create and add sub-buttons
                 System.Windows.Controls.Button? renameButton = CreateProfileSubButtons("Rename Profile", "pack://application:,,,/Images/Rename.png", button, RenameProfileButtonClick);
                 System.Windows.Controls.Button? copyButton = CreateProfileSubButtons("Copy Profile", "pack://application:,,,/Images/Copy.png", button, CopyProfileButtonClick);
                 System.Windows.Controls.Button? deleteButton = CreateProfileSubButtons("Delete Profile", "pack://application:,,,/Images/Delete.png", button, DeleteProfileButtonClick);
@@ -215,23 +209,17 @@ namespace SRCClient.Views
                     stackPanel.Children.Add(renameButton);
                     stackPanel.Children.Add(copyButton);
                     stackPanel.Children.Add(deleteButton);
-
-                    grid.Children.Add(stackPanel);  // Add StackPanel to Grid
+                    grid.Children.Add(stackPanel);
 
                     button.Content = grid;
-
-                    // Measure the TextBlock and the buttons to ensure proper width adjustment
+                    ProfileStack.Children.Add(button);
                     textBlock.Measure(new System.Windows.Size(double.PositiveInfinity, double.PositiveInfinity));
                     double textWidth = textBlock.DesiredSize.Width;
-                    double subButtonWidth = renameButton.Width + copyButton.Width + deleteButton.Width;
-                    // Adjust the button width if required to accommodate text and buttons
-                    double requiredWidth = textWidth + subButtonWidth; // Add some extra space for padding
-                    if (requiredWidth > button.Width)
-                    {
-                        button.Width = requiredWidth;
-                    }
 
-                    ProfileStack.Children.Add(button);
+                    stackPanel.Measure(new System.Windows.Size(double.PositiveInfinity, double.PositiveInfinity));
+                    double stackPanelWidth = stackPanel.DesiredSize.Width;
+                    double requiredWidth = textWidth + stackPanelWidth;
+                    button.Width = requiredWidth;
                     return button;
                 }
                 else
@@ -420,11 +408,12 @@ namespace SRCClient.Views
             var parentButton = button.Tag as System.Windows.Controls.Button;
             if (parentButton == null) return;
             string profileName = parentButton.Name.Replace("_", " ");
-            ConfirmDeleteProfileWindow confirmDeleteProfileWindow = new ConfirmDeleteProfileWindow(profileName)
+            ConfirmDeleteProfileWindow confirmDeleteProfileWindow = new ConfirmDeleteProfileWindow()
             {
                 Owner = this,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner
             };
+            confirmDeleteProfileWindow.SetMessageTextBlock("Are you sure you want to delete profile:", profileName);
             confirmDeleteProfileWindow.ShowDialog();
             if (confirmDeleteProfileWindow.DeletionConfirmed)
             {
@@ -458,7 +447,21 @@ namespace SRCClient.Views
 
         private void DeleteAllProfilesButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ConfirmDeleteProfileWindow confirmDeleteProfileWindow = new ConfirmDeleteProfileWindow()
+            {
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            confirmDeleteProfileWindow.SetMessageTextBlock("Are you sure you want to delete ALL profiles?", string.Empty);
+            confirmDeleteProfileWindow.ShowDialog();
+            if (confirmDeleteProfileWindow.DeletionConfirmed)
+            {
+                if (mainWindow != null)
+                {
+                    Profile.DeleteAll();
+                    ReloadProfileStack();
+                }
+            }
         }
     }
 }

@@ -8,12 +8,27 @@ namespace SRCClient.Views
 
         public bool DeletionConfirmed { get; private set; }
 
-        public ConfirmDeleteProfileWindow(string profileName)
+        public ConfirmDeleteProfileWindow()
         {
             InitializeComponent();
-            MessageTextBlock.Text += $" \"{profileName}\"";
+
+        }
+
+        public void SetMessageTextBlock(string message, string profileName)
+        {
+            if (profileName == string.Empty)
+            {
+                MessageTextBlock.Text = message;
+            }
+            else
+            {
+                MessageTextBlock.Text = $"{message} \"{profileName}\"";
+            }
             MessageTextBlock.Measure(new System.Windows.Size(double.PositiveInfinity, double.PositiveInfinity));
-            this.Width = MessageTextBlock.DesiredSize.Width + 10;
+            if (MessageTextBlock.DesiredSize.Width > this.MinWidth)
+            {
+                this.Width = MessageTextBlock.DesiredSize.Width;
+            }
         }
 
         private void BorderMouseDown(object sender, MouseButtonEventArgs e)

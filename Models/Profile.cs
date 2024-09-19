@@ -95,28 +95,35 @@ namespace SRCClient.Models
 
         public static void Save(string name, MainWindow mainWindow)
         {
-            string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
-            foreach (string file in files)
+            try
             {
-                if (file.Contains(".json"))
+                string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
+                foreach (string file in files)
                 {
-                    JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
-                    string profileName = profile["Name"]?.ToString() ?? string.Empty;
-                    if (profileName != string.Empty && profileName == name)
+                    if (file.Contains(".json"))
                     {
-                        profile["Name"] = name;
-                        profile["Cursor"] = mainWindow.CurrentCursor;
-                        profile["Window"]["Fullscreen"] = mainWindow.WindowState == WindowState.Maximized;
-                        profile["Window"]["Size"]["Width"] = mainWindow.Width;
-                        profile["Window"]["Size"]["Height"] = mainWindow.Height;
-                        profile["Window"]["Location"]["Left"] = mainWindow.Left;
-                        profile["Window"]["Location"]["Top"] = mainWindow.Top;
-                        string serialized = JsonConvert.SerializeObject(profile, Formatting.Indented);
-                        File.WriteAllText(LoadFile.Load("Profiles", $"{Path.GetFileName(file)}"), serialized);
-                        Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Saved");
-                        break;
+                        JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
+                        string profileName = profile["Name"]?.ToString() ?? string.Empty;
+                        if (profileName != string.Empty && profileName == name)
+                        {
+                            profile["Name"] = name;
+                            profile["Cursor"] = mainWindow.CurrentCursor;
+                            profile["Window"]["Fullscreen"] = mainWindow.WindowState == WindowState.Maximized;
+                            profile["Window"]["Size"]["Width"] = mainWindow.Width;
+                            profile["Window"]["Size"]["Height"] = mainWindow.Height;
+                            profile["Window"]["Location"]["Left"] = mainWindow.Left;
+                            profile["Window"]["Location"]["Top"] = mainWindow.Top;
+                            string serialized = JsonConvert.SerializeObject(profile, Formatting.Indented);
+                            File.WriteAllText(LoadFile.Load("Profiles", $"{Path.GetFileName(file)}"), serialized);
+                            Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Saved");
+                            break;
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                Logger.Error("Profile.Save", ex.ToString());
             }
         }
 
@@ -160,26 +167,33 @@ namespace SRCClient.Models
 
         public static void Copy(string name)
         {
-            string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
-            foreach (string file in files)
+            try
             {
-                if (file.Contains(".json"))
+                string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
+                foreach (string file in files)
                 {
-                    JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
-                    string profileName = profile["Name"]?.ToString() ?? string.Empty;
-                    if (profileName != string.Empty && profileName == name)
+                    if (file.Contains(".json"))
                     {
-                        profile["Name"] = $"{name} Copy";
-                        string serialized = JsonConvert.SerializeObject(profile, Formatting.Indented);
-                        File.WriteAllText(LoadFile.Load("Profiles", $"{GenerateUniqueHash()}.json"), serialized);
-                        Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Copied");
-                        break;
+                        JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
+                        string profileName = profile["Name"]?.ToString() ?? string.Empty;
+                        if (profileName != string.Empty && profileName == name)
+                        {
+                            profile["Name"] = $"{name} Copy";
+                            string serialized = JsonConvert.SerializeObject(profile, Formatting.Indented);
+                            File.WriteAllText(LoadFile.Load("Profiles", $"{GenerateUniqueHash()}.json"), serialized);
+                            Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Copied");
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        Logger.Error("Profile.Copy", $"{file} is not a valid config file!");
                     }
                 }
-                else
-                {
-                    Logger.Error("LoadProfileWindow.LoadProfiles", $"{file} is not a valid config file!");
-                }
+            }
+            catch(Exception ex)
+            {
+                Logger.Error("Profile.Copy", ex.ToString());
             }
         }
 
@@ -207,30 +221,37 @@ namespace SRCClient.Models
             }
             catch (Exception ex)
             {
-                Logger.Error("LoadProfileWindow.RenameProfile", ex.ToString());
+                Logger.Error("Profile.Rename", ex.ToString());
             }
         }
 
         public static void Delete(string name, MainWindow mainWindow)
         {
-            string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
-            foreach (string file in files)
+            try
             {
-                if (file.Contains(".json"))
+                string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
+                foreach (string file in files)
                 {
-                    JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
-                    string profileName = profile["Name"]?.ToString() ?? string.Empty;
-                    if (profileName != string.Empty && profileName == name)
+                    if (file.Contains(".json"))
                     {
-                        if (name == mainWindow.CurrentProfile)
+                        JObject profile = JObject.Parse(File.ReadAllText(LoadFile.Load("Profiles", file)));
+                        string profileName = profile["Name"]?.ToString() ?? string.Empty;
+                        if (profileName != string.Empty && profileName == name)
                         {
-                            mainWindow.CurrentProfile = string.Empty;
+                            if (name == mainWindow.CurrentProfile)
+                            {
+                                mainWindow.CurrentProfile = string.Empty;
+                            }
+                            File.Delete(file);
+                            Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Deleted");
+                            break;
                         }
-                        File.Delete(file);
-                        Logger.Debug("Profile.Load", $"Profile: \"{name}\" Successfully Deleted");
-                        break;
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                Logger.Error("Profile.Delete", ex.ToString());
             }
         }
 
@@ -238,9 +259,20 @@ namespace SRCClient.Models
         {
         }
 
-        public static void DeleteAll(string name, MainWindow mainWindow)
+        public static void DeleteAll()
         {
-
+            try
+            {
+                string[] files = Directory.GetFiles(LoadFile.LoadFolder("Profiles"));
+                foreach (string file in files)
+                {
+                    File.Delete(file);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("Profile.DeleteAll", ex.ToString());
+            }
         }
     }
 }

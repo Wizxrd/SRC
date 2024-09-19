@@ -135,7 +135,17 @@ namespace SRCClient
         {
             if (CurrentProfile != string.Empty)
             {
-                Profile.Save(CurrentProfile, this);
+                ConfirmSaveProfileWindow confirmSaveProfileWindow = new ConfirmSaveProfileWindow()
+                {
+                    Owner = this,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner
+                };
+                confirmSaveProfileWindow.SetMessageTextBlock("Save Profile:", CurrentProfile);
+                confirmSaveProfileWindow.ShowDialog();
+                if (confirmSaveProfileWindow.SaveConfirmed)
+                {
+                    Profile.Save(CurrentProfile, this);
+                }
             }
             else
             {
@@ -143,6 +153,7 @@ namespace SRCClient
                 Logger.Warning("MainWindow.SaveProfile", "No Profile Loaded!");
             }
         }
+
         private void OpenSaveProfileAsWindow()
         {
             SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this)
