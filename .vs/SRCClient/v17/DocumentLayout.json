@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\src-nextgen\\views\\newprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\newprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\saveprofileaswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\saveprofileaswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\src-nextgen\\views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\loadprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\loadprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\src-nextgen\\views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\src-nextgen\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\confirmsaveprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmsaveprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\confirmdeleteprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmdeleteprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\views\\confirmsaveprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmsaveprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\srcclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:srcclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\models\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\config\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:config\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\models\\loadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\loadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\models\\sound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\sound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 2196,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoadProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\LoadProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\LoadProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\LoadProfileWindow.xaml",
+              "RelativeToolTip": "Views\\LoadProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\NewProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\NewProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\NewProfileWindow.xaml",
+              "RelativeToolTip": "Views\\NewProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:37:40.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfirmDeleteProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmDeleteProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\ConfirmDeleteProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmDeleteProfileWindow.xaml",
+              "RelativeToolTip": "Views\\ConfirmDeleteProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaveProfileAsWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\SaveProfileAsWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\SaveProfileAsWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\SaveProfileAsWindow.xaml",
+              "RelativeToolTip": "Views\\SaveProfileAsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SRCClient",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\SRCClient.csproj",
+              "RelativeDocumentMoniker": "SRCClient.csproj",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\SRCClient.csproj",
+              "RelativeToolTip": "SRCClient.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-20T01:32:14.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfirmSaveProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmSaveProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\ConfirmSaveProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmSaveProfileWindow.xaml",
+              "RelativeToolTip": "Views\\ConfirmSaveProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Config.json",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Config\\Config.json",
+              "RelativeDocumentMoniker": "Config\\Config.json",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Config\\Config.json",
+              "RelativeToolTip": "Config\\Config.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-20T01:32:14.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Profile.cs",
+              "RelativeDocumentMoniker": "Models\\Profile.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Profile.cs",
+              "RelativeToolTip": "Models\\Profile.cs",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAcwBEBAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:14.939Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 72,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoadProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\LoadProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoadProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\LoadProfileWindow.xaml.cs",
+              "RelativeToolTip": "Views\\LoadProfileWindow.xaml.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAiwGMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NewProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\NewProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\NewProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\NewProfileWindow.xaml.cs",
+              "RelativeToolTip": "Views\\NewProfileWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:43:51.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAUwKAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SaveProfileAsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\SaveProfileAsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\SaveProfileAsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\SaveProfileAsWindow.xaml.cs",
+              "RelativeToolTip": "Views\\SaveProfileAsWindow.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAswDkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:14.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfirmDeleteProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmDeleteProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ConfirmDeleteProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmDeleteProfileWindow.xaml.cs",
+              "RelativeToolTip": "Views\\ConfirmDeleteProfileWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConfirmSaveProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmSaveProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ConfirmSaveProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Views\\ConfirmSaveProfileWindow.xaml.cs",
+              "RelativeToolTip": "Views\\ConfirmSaveProfileWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Config.cs",
+              "RelativeDocumentMoniker": "Models\\Config.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Config.cs",
+              "RelativeToolTip": "Models\\Config.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Sound.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Sound.cs",
+              "RelativeDocumentMoniker": "Models\\Sound.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\Sound.cs",
+              "RelativeToolTip": "Models\\Sound.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoadFile.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\LoadFile.cs",
+              "RelativeDocumentMoniker": "Models\\LoadFile.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\SRC-NextGen\\Models\\LoadFile.cs",
+              "RelativeToolTip": "Models\\LoadFile.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.402Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
