@@ -24,6 +24,7 @@
     <None Remove="Images\MaximizeMinimize.png" />
     <None Remove="Images\Menu.png" />
     <None Remove="Images\Minimize.png" />
+    <None Remove="Images\NewProfile.png" />
     <None Remove="Images\Question.png" />
     <None Remove="Images\QuestionBlue.png" />
     <None Remove="Images\QuestionRed.png" />
@@ -51,6 +52,7 @@
     <Resource Include="Images\MaximizeMinimize.png" />
     <Resource Include="Images\Menu.png" />
     <Resource Include="Images\Minimize.png" />
+    <Resource Include="Images\NewProfile.png" />
     <Resource Include="Images\QuestionBlue.png" />
     <Resource Include="Images\QuestionRed.png" />
     <Resource Include="Images\Rename.png" />

@@ -85,7 +85,7 @@ namespace SRCClient.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SRCClient;V0.0.3.0;component/views/confirmsaveprofilewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SRCClient;component/views/confirmsaveprofilewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ConfirmSaveProfileWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

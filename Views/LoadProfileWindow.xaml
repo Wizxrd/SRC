@@ -218,7 +218,8 @@
                         Height="32"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Center"
-                        Template="{StaticResource ButtonTemplate}" />
+                        Template="{StaticResource ButtonTemplate}"
+                        Click="NewProfileButtonClick"/>
                     <Button Name="ImportProfileButton" Grid.Column="1"
                         Content="Import Profile"
                         Margin="5,0"

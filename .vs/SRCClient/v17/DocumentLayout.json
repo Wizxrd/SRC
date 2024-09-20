@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\github\\src\\views\\newprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\newprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,28 +15,32 @@
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\saveprofileaswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\github\\src\\views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\loadprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\loadprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|c:\\users\\nicks\\onedrive\\documents\\github\\src\\views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\loadprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\newprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\saveprofileaswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:views\\confirmdeleteprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\views\\confirmsaveprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\srcclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:srcclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC29372F-4E10-4289-8A12-AF7EE23403C3}|SRCClient.csproj|C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\models\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,23 +85,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 2196,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 831,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoadProfileWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml",
-              "RelativeDocumentMoniker": "Views\\LoadProfileWindow.xaml",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml",
-              "RelativeToolTip": "Views\\LoadProfileWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-20T01:32:14.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NewProfileWindow.xaml",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\NewProfileWindow.xaml",
               "RelativeDocumentMoniker": "Views\\NewProfileWindow.xaml",
@@ -113,7 +102,56 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoadProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\LoadProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml",
+              "RelativeToolTip": "Views\\LoadProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SaveProfileAsWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\SaveProfileAsWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml",
+              "RelativeToolTip": "Views\\SaveProfileAsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Models\\Profile.cs",
+              "RelativeDocumentMoniker": "Models\\Profile.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Models\\Profile.cs",
+              "RelativeToolTip": "Models\\Profile.cs",
+              "ViewState": "AQIAAPgAAAAAAAAAAAAiwAQBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:14.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-20T01:32:14.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ConfirmDeleteProfileWindow.xaml",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\ConfirmDeleteProfileWindow.xaml",
               "RelativeDocumentMoniker": "Views\\ConfirmDeleteProfileWindow.xaml",
@@ -124,29 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SaveProfileAsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml",
-              "RelativeDocumentMoniker": "Views\\SaveProfileAsWindow.xaml",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml",
-              "RelativeToolTip": "Views\\SaveProfileAsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-20T01:32:14.154Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-20T01:32:14.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "SRCClient",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\SRCClient.csproj",
               "RelativeDocumentMoniker": "SRCClient.csproj",
@@ -157,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ConfirmSaveProfileWindow.xaml",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\ConfirmSaveProfileWindow.xaml",
               "RelativeDocumentMoniker": "Views\\ConfirmSaveProfileWindow.xaml",
@@ -177,77 +193,68 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-09-20T01:32:14.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Profile.cs",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Models\\Profile.cs",
-              "RelativeDocumentMoniker": "Models\\Profile.cs",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Models\\Profile.cs",
-              "RelativeToolTip": "Models\\Profile.cs",
-              "ViewState": "AQIAAOMAAAAAAAAAAAAcwBEBAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T01:32:14.939Z"
             }
           ]
         },
         {
-          "DockedWidth": 72,
+          "DockedWidth": 1437,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "NewProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\NewProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\NewProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\NewProfileWindow.xaml.cs",
+              "RelativeToolTip": "Views\\NewProfileWindow.xaml.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwDcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:43:51.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LoadProfileWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\LoadProfileWindow.xaml.cs",
               "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\LoadProfileWindow.xaml.cs",
               "RelativeToolTip": "Views\\LoadProfileWindow.xaml.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAiwGMAAAAcAAAA",
+              "ViewState": "AQIAAIsBAAAAAAAAAADwv5UBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T01:32:15.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NewProfileWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\NewProfileWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\NewProfileWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\NewProfileWindow.xaml.cs",
-              "RelativeToolTip": "Views\\NewProfileWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T01:43:51.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAUwKAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T01:32:15.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "SaveProfileAsWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\SaveProfileAsWindow.xaml.cs",
               "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\SaveProfileAsWindow.xaml.cs",
               "RelativeToolTip": "Views\\SaveProfileAsWindow.xaml.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAswDkAAAAIAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwDkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T01:32:15.387Z"
+              "WhenOpened": "2024-09-20T01:32:15.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAgwD8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T01:32:15.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -259,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ConfirmDeleteProfileWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\ConfirmDeleteProfileWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ConfirmDeleteProfileWindow.xaml.cs",
@@ -271,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ConfirmSaveProfileWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\Views\\ConfirmSaveProfileWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ConfirmSaveProfileWindow.xaml.cs",

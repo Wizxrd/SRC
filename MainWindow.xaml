@@ -106,6 +106,34 @@
                             </DataTemplate>
                         </Button.ContentTemplate>
                     </Button>
+                    <Button Name="NewProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Template="{StaticResource MenuButtonTemplate}" Click="NewProfileButtonClick">
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="125"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="New Profile"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Padding="10"/>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        FontSize="12"
+                                        Foreground="White"
+                                        Text="Ctrl+N"
+                                        TextAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Padding="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
                     <Button Name="LoadProfileButton" Width="Auto" Height="30" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Stretch" Click="LoadProfileButtonClick" Template="{StaticResource MenuButtonTemplate}">
                         <Button.ContentTemplate>
                             <DataTemplate>

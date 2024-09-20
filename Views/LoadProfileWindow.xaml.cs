@@ -428,6 +428,12 @@ namespace SRCClient.Views
 
         private void NewProfileButtonClick(object sender, RoutedEventArgs e)
         {
+            NewProfileWindow newProfileWindow = new NewProfileWindow
+            {
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            newProfileWindow.ShowDialog();
 
         }
 

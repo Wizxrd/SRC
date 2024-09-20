@@ -12,6 +12,11 @@ namespace SRCClient.Models
             return Guid.NewGuid().ToString();
         }
 
+        public static void New(string name, MainWindow mainWindow)
+        {
+
+        }
+
         public static void Load(string name, MainWindow mainWindow)
         {
             try
@@ -253,10 +258,6 @@ namespace SRCClient.Models
             {
                 Logger.Error("Profile.Delete", ex.ToString());
             }
-        }
-
-        public static void New(string name, MainWindow mainWindow)
-        {
         }
 
         public static void DeleteAll()

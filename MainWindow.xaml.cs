@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.IO;
 using SRCClient.Views;
+using System.Runtime.CompilerServices;
 
 namespace SRCClient
 {
@@ -57,6 +58,10 @@ namespace SRCClient
                 else if (e.Key == Key.L)
                 {
                     OpenLoadProfileWindow();
+                }
+                else if (e.Key == Key.N)
+                {
+                    OpenNewProfileWindow();
                 }
             }
         }
@@ -113,6 +118,11 @@ namespace SRCClient
             this.Close();
         }
 
+        private void NewProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+            OpenNewProfileWindow();
+        }
+
         private void SaveProfileButtonClick(object sender, RoutedEventArgs e)
         {
             SaveProfile();
@@ -152,6 +162,16 @@ namespace SRCClient
                 Sound.Play("Error");
                 Logger.Warning("MainWindow.SaveProfile", "No Profile Loaded!");
             }
+        }
+
+        private void OpenNewProfileWindow()
+        {
+            NewProfileWindow newProfileWindow = new NewProfileWindow
+            {
+                Owner = this,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            newProfileWindow.ShowDialog();
         }
 
         private void OpenSaveProfileAsWindow()
