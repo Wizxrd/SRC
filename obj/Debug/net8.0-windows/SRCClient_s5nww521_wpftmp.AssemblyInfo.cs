@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SRCClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.3+873e500afb69b25e1ef08a26119942d975cfda7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SRCClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SRCClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.3.0")]
