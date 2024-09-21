@@ -19,6 +19,8 @@
     <None Remove="Images\Close.png" />
     <None Remove="Images\Copy.png" />
     <None Remove="Images\Delete.png" />
+    <None Remove="Images\Edit.png" />
+    <None Remove="Images\Export.png" />
     <None Remove="Images\LoadProfile.png" />
     <None Remove="Images\Maximize.png" />
     <None Remove="Images\MaximizeMinimize.png" />
@@ -47,6 +49,8 @@
     <Resource Include="Images\Close.png" />
     <Resource Include="Images\Copy.png" />
     <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Edit.png" />
+    <Resource Include="Images\Export.png" />
     <Resource Include="Images\LoadProfile.png" />
     <Resource Include="Images\Maximize.png" />
     <Resource Include="Images\MaximizeMinimize.png" />

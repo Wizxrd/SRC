@@ -973,11 +973,11 @@
   "project": {
     "version": "0.0.3",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\SRCClient.csproj",
+      "projectUniqueName": "D:\\SRC\\SRCClient.csproj",
       "projectName": "SRCClient",
-      "projectPath": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\SRCClient.csproj",
+      "projectPath": "D:\\SRC\\SRCClient.csproj",
       "packagesPath": "C:\\Users\\nicks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicks\\OneDrive\\Documents\\GitHub\\SRC\\obj\\",
+      "outputPath": "D:\\SRC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1000,11 +1000,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1047,7 +1042,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

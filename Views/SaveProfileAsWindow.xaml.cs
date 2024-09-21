@@ -73,6 +73,11 @@ namespace SRCClient.Views
             SaveProfileAs();
         }
 
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         // Core
         private void SaveProfileAs()
         {

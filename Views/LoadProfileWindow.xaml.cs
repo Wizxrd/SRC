@@ -199,15 +199,18 @@ namespace SRCClient.Views
                 button.Click += ProfileButtonClick;
                 button.MouseDoubleClick += ProfileButtonMouseDoubleClick;
 
-                // Create and add sub-buttons
+                System.Windows.Controls.Button? editButton = CreateProfileSubButtons("Edit Profile", "pack://application:,,,/Images/Edit.png", button, EditProfileButtonClick);
                 System.Windows.Controls.Button? renameButton = CreateProfileSubButtons("Rename Profile", "pack://application:,,,/Images/Rename.png", button, RenameProfileButtonClick);
                 System.Windows.Controls.Button? copyButton = CreateProfileSubButtons("Copy Profile", "pack://application:,,,/Images/Copy.png", button, CopyProfileButtonClick);
+                System.Windows.Controls.Button? exportButton = CreateProfileSubButtons("Export Profile", "pack://application:,,,/Images/Export.png", button, ExportProfileButtonClick);
                 System.Windows.Controls.Button? deleteButton = CreateProfileSubButtons("Delete Profile", "pack://application:,,,/Images/Delete.png", button, DeleteProfileButtonClick);
 
-                if (renameButton != null && copyButton != null && deleteButton != null)
+                if (editButton != null && exportButton != null && renameButton != null && copyButton != null && deleteButton != null)
                 {
+                    stackPanel.Children.Add(editButton);
                     stackPanel.Children.Add(renameButton);
                     stackPanel.Children.Add(copyButton);
+                    stackPanel.Children.Add(exportButton);
                     stackPanel.Children.Add(deleteButton);
                     grid.Children.Add(stackPanel);
 
@@ -271,6 +274,11 @@ namespace SRCClient.Views
             {
                 Logger.Error("LoadProfileWindow.ProfileButtonMouseDoubleClick", ex.ToString());
             }
+        }
+
+        private void EditProfileButtonClick(object sender, EventArgs e)
+        {
+
         }
 
         private void RenameProfileButtonClick(object sender, RoutedEventArgs e)
@@ -401,6 +409,11 @@ namespace SRCClient.Views
             ReloadProfileStack();
         }
 
+        private void ExportProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void DeleteProfileButtonClick(object sender, RoutedEventArgs e)
         {
             var button = sender as System.Windows.Controls.Button;
@@ -428,13 +441,15 @@ namespace SRCClient.Views
 
         private void NewProfileButtonClick(object sender, RoutedEventArgs e)
         {
-            NewProfileWindow newProfileWindow = new NewProfileWindow
+            if (mainWindow != null)
             {
-                Owner = this,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner
-            };
-            newProfileWindow.ShowDialog();
-
+                NewProfileWindow newProfileWindow = new NewProfileWindow(mainWindow)
+                {
+                    Owner = this,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner
+                };
+                newProfileWindow.ShowDialog();
+            }
         }
 
         private void ImportProfileButtonClick(object sender, RoutedEventArgs e)

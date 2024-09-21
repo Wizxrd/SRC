@@ -53,7 +53,7 @@ namespace SRCClient
                 }
                 else if (e.Key == Key.S)
                 {
-                    SaveProfile();
+                    OpenConfirmSaveProfileWindow();
                 }
                 else if (e.Key == Key.L)
                 {
@@ -125,23 +125,21 @@ namespace SRCClient
 
         private void SaveProfileButtonClick(object sender, RoutedEventArgs e)
         {
-            SaveProfile();
+            OpenConfirmSaveProfileWindow();
         }
         private void SaveProfileAsButtonClick(object sender, RoutedEventArgs e)
         {
-            MenuPopup.IsOpen = !MenuPopup.IsOpen;
             OpenSaveProfileAsWindow();
         }
 
         private void LoadProfileButtonClick(Object sender, RoutedEventArgs e)
         {
-            MenuPopup.IsOpen = !MenuPopup.IsOpen;
             OpenLoadProfileWindow();
         }
 
         // Core
 
-        private void SaveProfile()
+        private void OpenConfirmSaveProfileWindow()
         {
             if (CurrentProfile != string.Empty)
             {
@@ -166,22 +164,32 @@ namespace SRCClient
 
         private void OpenNewProfileWindow()
         {
-            NewProfileWindow newProfileWindow = new NewProfileWindow
+            NewProfileWindow newProfileWindow = new NewProfileWindow(this)
             {
                 Owner = this,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner
             };
+            MenuPopup.IsOpen = !MenuPopup.IsOpen;
             newProfileWindow.ShowDialog();
         }
 
         private void OpenSaveProfileAsWindow()
         {
-            SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this)
+            if (CurrentProfile != string.Empty)
             {
-                Owner = this,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner
-            };
-            saveProfileAsWindow.ShowDialog();
+                SaveProfileAsWindow saveProfileAsWindow = new SaveProfileAsWindow(this)
+                {
+                    Owner = this,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner
+                };
+                MenuPopup.IsOpen = !MenuPopup.IsOpen;
+                saveProfileAsWindow.ShowDialog();
+            }
+            else
+            {
+                Sound.Play("Error");
+                Logger.Warning("MainWindow.OpenSaveProfileAsWindow", "No Profile Loaded!");
+            }
         }
 
         private void OpenLoadProfileWindow()
@@ -191,6 +199,7 @@ namespace SRCClient
                 Owner = this,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner
             };
+            MenuPopup.IsOpen = !MenuPopup.IsOpen;
             loadProfileWindow.ShowDialog();
         }
     }

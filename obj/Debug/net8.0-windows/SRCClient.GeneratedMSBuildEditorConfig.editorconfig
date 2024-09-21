@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SRCClient
-build_property.ProjectDir = C:\Users\nicks\OneDrive\Documents\GitHub\SRC\
+build_property.ProjectDir = D:\SRC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

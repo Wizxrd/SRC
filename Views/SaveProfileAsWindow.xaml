@@ -50,9 +50,8 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderBrush="#303030" BorderThickness="1" MouseDown="BorderMouseDown">
                 <Grid>
@@ -68,54 +67,70 @@
                     </Button>
                 </Grid>
             </Border>
-            <TextBlock Grid.Row="1" Text="Profile Name:" Foreground="White" Margin="12,12,12,6"/>
-            <TextBox Name="ProfileNameTextBox" Grid.Row="2" Height="24" FontFamily="Consolas" TextAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Width="275" Background="#505050" Foreground="White"/>
-            <Button IsEnabled="False" Name="SaveProfileButton" Content="Save Profile" Padding="5,0" Grid.Row="3" Width="Auto" Height="24" Background="#252525" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,10,74,0" Click="SaveProfileButtonClick">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="#38b6ff"/>
-                            <ContentPresenter Content="{TemplateBinding Content}" 
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
-                            Margin="{TemplateBinding Padding}" />
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#252525"/>
-                                <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="#38b6ff"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Name="CancelButton" Content="Cancel" Grid.Row="3" Padding="5,0" Width="Auto" Height="24" Background="#353535" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,10,12,0" Click="CloseButtonClick">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="#38b6ff"/>
-                            <ContentPresenter Content="{TemplateBinding Content}" 
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
-                            Margin="{TemplateBinding Padding}" />
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Border Grid.Row="1" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Profile Name:" Foreground="White" Margin="5"/>
+                    <TextBox Name="ProfileNameTextBox" Grid.Row="1" Height="24" FontFamily="Consolas" Margin="5,0,0,0" TextAlignment="Left" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Width="290" Background="#505050" Foreground="White"/>
+                </Grid>
+            </Border>
+            <Border Grid.Row="2" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Margin="0,0,5,0" IsEnabled="False" Name="SaveProfileButton" Content="Save Profile" Padding="5,0" Width="Auto" Height="32" Background="#252525" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Click="SaveProfileButtonClick">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="#38b6ff"/>
+                                    <ContentPresenter Content="{TemplateBinding Content}" 
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                                    Margin="{TemplateBinding Padding}" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="#252525"/>
+                                        <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="#38b6ff"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Grid.Column="1" Margin="0,0,5,0" Name="CancelButton" Content="Cancel" Padding="5,0" Width="Auto" Height="32" Background="#353535" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Click="CancelButtonClick">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Border x:Name="ButtonBorder" Background="#353535" BorderThickness="1" BorderBrush="#38b6ff"/>
+                                    <ContentPresenter Content="{TemplateBinding Content}" 
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                                    Margin="{TemplateBinding Padding}" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="#505050"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Border>
         </Grid>
     </Border>
 </Window>

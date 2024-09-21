@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Windows;
+using System.Xml.Linq;
 
 namespace SRCClient.Models
 {
@@ -12,9 +13,41 @@ namespace SRCClient.Models
             return Guid.NewGuid().ToString();
         }
 
-        public static void New(string name, MainWindow mainWindow)
+        public static void New(string profileName, string serverIP, string port, string password, string callsign, MainWindow mainWindow)
         {
-
+            JObject profile = new JObject
+            {
+                {"Name", profileName },
+                { "Server", new JObject
+                    {
+                        {"IP", serverIP },
+                        {"Port", port },
+                        {"Password", password },
+                        {"Callsign", callsign }
+                    }
+                },
+                { "Cursor", mainWindow.CurrentCursor },
+                { "Window", new JObject
+                    {
+                        {"Fullscreen", mainWindow.WindowState == WindowState.Maximized},
+                        { "Size", new JObject
+                            {
+                                { "Width", mainWindow.Width },
+                                { "Height", mainWindow.Height }
+                            }
+                        },
+                        { "Location", new JObject
+                            {
+                                { "Left", mainWindow.Left },
+                                { "Top", mainWindow.Top }
+                            }
+                        }
+                    }
+                }
+            };
+            string serialized = JsonConvert.SerializeObject(profile, Formatting.Indented);
+            File.WriteAllText(LoadFile.Load("Profiles", $"{GenerateUniqueHash()}.json"), serialized);
+            Logger.Debug("Profile.New", $"Profile: \"{profileName}\" Successfully Created");
         }
 
         public static void Load(string name, MainWindow mainWindow)

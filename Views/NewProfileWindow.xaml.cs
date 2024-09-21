@@ -1,12 +1,16 @@
-﻿using System.Windows;
+﻿using SRCClient.Models;
+using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Input;
 
 namespace SRCClient.Views
 {
     public partial class NewProfileWindow : Window
     {
-        public NewProfileWindow()
+        private MainWindow? mainWindow;
+        public NewProfileWindow(MainWindow mainWindow)
         {
+            this.mainWindow = mainWindow;
             InitializeComponent();
         }
         private void BorderMouseDown(object sender, MouseButtonEventArgs e)
@@ -17,49 +21,36 @@ namespace SRCClient.Views
             }
         }
 
-        private void TextBoxesTextChanged(object sender, EventArgs e)
+        private void TextBoxChanged(object sender, EventArgs e)
         {
-            var textBox = sender as TextBox;
-            if (textBox == null) return;
-            if (textBox.Name == "ServerIPPortTextBox")
+            try
             {
-                if (textBox.Text == string.Empty)
+                if (ServerIPPortTextBox.Text == string.Empty || PasswordTextBox.Text == string.Empty || CallsignTextBox.Text == string.Empty && ProfileNameTextBox.Text == string.Empty)
                 {
                     CreateProfileButton.IsEnabled = false;
                     return;
                 }
+                CreateProfileButton.IsEnabled = true;
             }
-            else if (textBox.Name == "PasswordTextBox")
+            catch (Exception ex)
             {
-                if (textBox.Text == string.Empty)
-                {
-                    CreateProfileButton.IsEnabled = false;
-                    return;
-                }
+                Logger.Error("NewProfileWindow.TextBoxesTextChanged", ex.ToString());
             }
-            else if (textBox.Name == "CallsignTextBox")
-            {
-                if (textBox.Text == string.Empty)
-                {
-                    CreateProfileButton.IsEnabled = false;
-                    return;
-                }
-            }
-            else if (textBox.Name == "ProfileNameTextBox")
-            {
-                if (textBox.Text == string.Empty)
-                {
-                    CreateProfileButton.IsEnabled = false;
-                    return;
-                }
-            }
-            System.Windows.MessageBox.Show("HI");
-            CreateProfileButton.IsEnabled = true;
         }
 
         private void CreateProfileButtonClick(object sender, RoutedEventArgs e)
         {
-
+            string regex = @"^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d{1,5})$";
+            Match match = Regex.Match(ServerIPPortTextBox.Text, regex);
+            if (match.Success)
+            {
+                string serverIP = match.Groups[1].Value;
+                string port = match.Groups[2].Value;
+                if (mainWindow != null)
+                {
+                    Profile.New(ProfileNameTextBox.Text, serverIP, port, PasswordTextBox.Text, CallsignTextBox.Text, mainWindow);
+                }
+            }
         }
 
         private void CancelButtonClick(object sender, RoutedEventArgs e)

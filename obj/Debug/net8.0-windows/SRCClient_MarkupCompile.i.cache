@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\nicks\OneDrive\Documents\GitHub\SRC\obj\Debug\net8.0-windows\
+D:\SRC\obj\Debug\net8.0-windows\
 SRCClient
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\nicks\OneDrive\Documents\GitHub\SRC\App.xaml
+D:\SRC\App.xaml
 6-1463258443
 
 1634793293
-2251452700823
+2251935885134
 MainWindow.xaml;Views\ConfirmDeleteProfileWindow.xaml;Views\ConfirmSaveProfileWindow.xaml;Views\LoadProfileWindow.xaml;Views\NewProfileWindow.xaml;Views\SaveProfileAsWindow.xaml;
 
 False
